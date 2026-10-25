@@ -1,0 +1,46 @@
+Captured AWS grader output, 2026-10-24 UTC. ANSI formatting removed; resource IDs omitted.
+───────────────────────────────────────────────────────
+  Task 2 - Multi-Agent Orchestration
+───────────────────────────────────────────────────────
+  ✓ PASS [+5pts] build_inventory_agent() returns an Agent object
+  ✓ PASS [+5pts] InventoryAgent has 3 tools (3 found)
+  ✓ PASS [+5pts] build_policy_agent() returns an Agent object
+  ✓ PASS [+5pts] PolicyAgent has 1 tool (1 found)
+  ✓ PASS [+5pts] build_orchestrator_agent() returns an Agent object
+  ✓ PASS [+5pts] OrchestratorAgent has 5 routing tools (5 found)
+  ✓ PASS [+5pts] OrchestratorAgent uses Claude 3 Haiku (correct for routing)
+  ✓ PASS [+5pts] Worker agents use Claude 3 Sonnet (correct for reasoning)
+
+───────────────────────────────────────────────────────
+  Task 3 - AgentCore Deployment + Guardrails
+───────────────────────────────────────────────────────
+  ✓ PASS [+10pts] Guardrail 'udacity-agentcore-guardrail' exists in Bedrock
+  ✓ PASS [+5pts] Guardrail has content, PII, and topic policies
+  ✓ PASS [+5pts] AGENTCORE_RUNTIME_ARN is set in environment
+
+───────────────────────────────────────────────────────
+  Task 4 - Memory
+───────────────────────────────────────────────────────
+  ✓ PASS [+15pts] AgentCore Memory is enabled (SESSION_SUMMARY type)
+
+───────────────────────────────────────────────────────
+  Task 5 - Bedrock Knowledge Bases
+───────────────────────────────────────────────────────
+  ✓ PASS [+8pts] RETURNS_KB_ID is set in environment ([KB ID omitted])
+  ✓ PASS [+0pts] Returns Knowledge Base is ACTIVE
+  ✓ PASS [+8pts] SHIPPING_KB_ID is set in environment ([KB ID omitted])
+  ✓ PASS [+0pts] Shipping Knowledge Base is ACTIVE
+  ✓ PASS [+9pts] WARRANTY_KB_ID is set in environment ([KB ID omitted])
+  ✓ PASS [+0pts] Warranty Knowledge Base is ACTIVE
+
+───────────────────────────────────────────────────────
+  Task 6 - Observability
+───────────────────────────────────────────────────────
+  ✓ PASS [+10pts] CloudWatch logging is enabled for the AgentCore runtime
+  ✓ PASS [+10pts] X-Ray tracing is enabled for the AgentCore runtime
+
+═══════════════════════════════════════════════════════
+  Score: 120/120 pts (100%)
+═══════════════════════════════════════════════════════
+
+  🎉 Perfect score! All tasks complete.

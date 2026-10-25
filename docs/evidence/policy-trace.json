@@ -1,0 +1,731 @@
+{
+  "trace_id": "1-6adcf418-2b77e002bdda1745403b10db",
+  "captured_at": "2026-10-24T18:08:24.343622+00:00",
+  "source_sha256": "60bc668c2a8f29b3c840fb2d8cca72791ad0c265677bc17e0d296bcb68c51b53",
+  "description": "X-Ray span names, hierarchy and timestamps. Account metadata and span payloads omitted.",
+  "duration_seconds": 25.788,
+  "spans": [
+    {
+      "id": "5aa432201e962d7a",
+      "parent_id": null,
+      "name": "NovaMart-Orchestrator",
+      "start": 1792865304.343622,
+      "end": 1792865330.1317663
+    },
+    {
+      "id": "15f5f3ae25e2a4ce",
+      "parent_id": "5aa432201e962d7a",
+      "name": "BedrockRuntime",
+      "start": 1792865304.895784,
+      "end": 1792865305.3635788
+    },
+    {
+      "id": "23f36e041f32d9e2",
+      "parent_id": "15f5f3ae25e2a4ce",
+      "name": "BedrockRuntime",
+      "start": 1792865304.895784,
+      "end": 1792865305.3635788
+    },
+    {
+      "id": "5aa3e86349fdc8b6",
+      "parent_id": "5aa432201e962d7a",
+      "name": "execute_tool initialize_session",
+      "start": 1792865305.365073,
+      "end": 1792865305.429017
+    },
+    {
+      "id": "cc592a3156cab9d7",
+      "parent_id": "5aa3e86349fdc8b6",
+      "name": "DynamoDB",
+      "start": 1792865305.3748004,
+      "end": 1792865305.4051929
+    },
+    {
+      "id": "2d3a1f8900c4329f",
+      "parent_id": "cc592a3156cab9d7",
+      "name": "DynamoDB",
+      "start": 1792865305.3748004,
+      "end": 1792865305.4051929
+    },
+    {
+      "id": "04acaba3d8c0428b",
+      "parent_id": "5aa3e86349fdc8b6",
+      "name": "DynamoDB",
+      "start": 1792865305.4062047,
+      "end": 1792865305.413442
+    },
+    {
+      "id": "18d7bc4421f863bc",
+      "parent_id": "04acaba3d8c0428b",
+      "name": "DynamoDB",
+      "start": 1792865305.4062047,
+      "end": 1792865305.413442
+    },
+    {
+      "id": "271dadb45efc2b7b",
+      "parent_id": "5aa3e86349fdc8b6",
+      "name": "DynamoDB",
+      "start": 1792865305.4144616,
+      "end": 1792865305.4220316
+    },
+    {
+      "id": "325d10e015814b6a",
+      "parent_id": "271dadb45efc2b7b",
+      "name": "DynamoDB",
+      "start": 1792865305.4144616,
+      "end": 1792865305.4220316
+    },
+    {
+      "id": "124b3086a529dde5",
+      "parent_id": "5aa3e86349fdc8b6",
+      "name": "DynamoDB",
+      "start": 1792865305.4231572,
+      "end": 1792865305.4277322
+    },
+    {
+      "id": "14ff61fb242fb50a",
+      "parent_id": "124b3086a529dde5",
+      "name": "DynamoDB",
+      "start": 1792865305.4231572,
+      "end": 1792865305.4277322
+    },
+    {
+      "id": "3eb1e1929798d6be",
+      "parent_id": "5aa432201e962d7a",
+      "name": "BedrockAgentCore",
+      "start": 1792865305.4323854,
+      "end": 1792865305.4824939
+    },
+    {
+      "id": "396a139d37051831",
+      "parent_id": "3eb1e1929798d6be",
+      "name": "BedrockAgentCore",
+      "start": 1792865305.4323854,
+      "end": 1792865305.4824939
+    },
+    {
+      "id": "b51ad03e63e0345d",
+      "parent_id": "5aa432201e962d7a",
+      "name": "invoke_agent OrchestratorAgent",
+      "start": 1792865305.4838881,
+      "end": 1792865330.013466
+    },
+    {
+      "id": "2f72a7e132752625",
+      "parent_id": "b51ad03e63e0345d",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865305.4842823,
+      "end": 1792865322.611343
+    },
+    {
+      "id": "becf7dd406b617d2",
+      "parent_id": "2f72a7e132752625",
+      "name": "chat",
+      "start": 1792865305.4854145,
+      "end": 1792865306.4587986
+    },
+    {
+      "id": "9188ea53a0c05eda",
+      "parent_id": "becf7dd406b617d2",
+      "name": "BedrockRuntime",
+      "start": 1792865305.4861584,
+      "end": 1792865306.4583268
+    },
+    {
+      "id": "3cb7726a1e811a90",
+      "parent_id": "9188ea53a0c05eda",
+      "name": "BedrockRuntime",
+      "start": 1792865305.4861584,
+      "end": 1792865306.4583268
+    },
+    {
+      "id": "89bbe1d2e512b648",
+      "parent_id": "2f72a7e132752625",
+      "name": "execute_tool route_to_policy_agent",
+      "start": 1792865306.459245,
+      "end": 1792865322.6110408
+    },
+    {
+      "id": "99df19bae4aeb081",
+      "parent_id": "89bbe1d2e512b648",
+      "name": "DynamoDB",
+      "start": 1792865306.4604278,
+      "end": 1792865306.4654932
+    },
+    {
+      "id": "02b0265606ac10d5",
+      "parent_id": "99df19bae4aeb081",
+      "name": "DynamoDB",
+      "start": 1792865306.4604278,
+      "end": 1792865306.4654932
+    },
+    {
+      "id": "0f99bc39f7abcdbe",
+      "parent_id": "89bbe1d2e512b648",
+      "name": "invoke_agent PolicyAgent",
+      "start": 1792865306.4660552,
+      "end": 1792865322.5963068
+    },
+    {
+      "id": "698fa422dea19fde",
+      "parent_id": "0f99bc39f7abcdbe",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865306.4662871,
+      "end": 1792865317.1719353
+    },
+    {
+      "id": "8045c78b1e53f00a",
+      "parent_id": "698fa422dea19fde",
+      "name": "chat",
+      "start": 1792865306.466519,
+      "end": 1792865308.246724
+    },
+    {
+      "id": "0dd3615d896a5088",
+      "parent_id": "8045c78b1e53f00a",
+      "name": "BedrockRuntime",
+      "start": 1792865306.4669938,
+      "end": 1792865308.2462573
+    },
+    {
+      "id": "2e7a87a40f7b57d6",
+      "parent_id": "0dd3615d896a5088",
+      "name": "BedrockRuntime",
+      "start": 1792865306.4669938,
+      "end": 1792865308.2462573
+    },
+    {
+      "id": "3dedbc769bf4a4d8",
+      "parent_id": "698fa422dea19fde",
+      "name": "execute_tool search_all_policies",
+      "start": 1792865308.247146,
+      "end": 1792865317.1715674
+    },
+    {
+      "id": "4344703cc994883f",
+      "parent_id": "3dedbc769bf4a4d8",
+      "name": "invoke_agent ShippingPolicyRetrieverAgent",
+      "start": 1792865308.2488074,
+      "end": 1792865317.1683538
+    },
+    {
+      "id": "4b8fa8c49944f3d8",
+      "parent_id": "4344703cc994883f",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865308.2490027,
+      "end": 1792865310.4599962
+    },
+    {
+      "id": "289b14118835f50a",
+      "parent_id": "4b8fa8c49944f3d8",
+      "name": "chat",
+      "start": 1792865308.2492166,
+      "end": 1792865310.080947
+    },
+    {
+      "id": "493d77ad30a62ab2",
+      "parent_id": "3dedbc769bf4a4d8",
+      "name": "invoke_agent ReturnsPolicyRetrieverAgent",
+      "start": 1792865308.249766,
+      "end": 1792865316.6720817
+    },
+    {
+      "id": "2730c8d73a3dc0b0",
+      "parent_id": "493d77ad30a62ab2",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865308.2499492,
+      "end": 1792865310.3587396
+    },
+    {
+      "id": "0bbb68146a3c69ea",
+      "parent_id": "2730c8d73a3dc0b0",
+      "name": "chat",
+      "start": 1792865308.2501404,
+      "end": 1792865309.922452
+    },
+    {
+      "id": "112cf44c73b21eb3",
+      "parent_id": "289b14118835f50a",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2505634,
+      "end": 1792865310.08048
+    },
+    {
+      "id": "35d20c540f48653f",
+      "parent_id": "112cf44c73b21eb3",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2505634,
+      "end": 1792865310.08048
+    },
+    {
+      "id": "e7345b829ec7156b",
+      "parent_id": "3dedbc769bf4a4d8",
+      "name": "invoke_agent WarrantyPolicyRetrieverAgent",
+      "start": 1792865308.2531152,
+      "end": 1792865315.7583718
+    },
+    {
+      "id": "5582681b729e6d2e",
+      "parent_id": "e7345b829ec7156b",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865308.2532978,
+      "end": 1792865310.354997
+    },
+    {
+      "id": "b8c04cd17123bc2f",
+      "parent_id": "5582681b729e6d2e",
+      "name": "chat",
+      "start": 1792865308.253519,
+      "end": 1792865309.9072642
+    },
+    {
+      "id": "2f26c354cc0d1c50",
+      "parent_id": "0bbb68146a3c69ea",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2542157,
+      "end": 1792865309.9217403
+    },
+    {
+      "id": "23e668a10ab7ff23",
+      "parent_id": "2f26c354cc0d1c50",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2542157,
+      "end": 1792865309.9217403
+    },
+    {
+      "id": "54c9054292c6565e",
+      "parent_id": "b8c04cd17123bc2f",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2556374,
+      "end": 1792865309.9066448
+    },
+    {
+      "id": "24b7388d12826682",
+      "parent_id": "54c9054292c6565e",
+      "name": "BedrockRuntime",
+      "start": 1792865308.2556374,
+      "end": 1792865309.9066448
+    },
+    {
+      "id": "422119316f23d7f8",
+      "parent_id": "5582681b729e6d2e",
+      "name": "execute_tool retrieve_warranty_policy",
+      "start": 1792865309.907643,
+      "end": 1792865310.3545458
+    },
+    {
+      "id": "f5a0513008bb53fa",
+      "parent_id": "422119316f23d7f8",
+      "name": "Bedrock",
+      "start": 1792865309.9079838,
+      "end": 1792865310.354147
+    },
+    {
+      "id": "0e0a7bcf2ebf693f",
+      "parent_id": "f5a0513008bb53fa",
+      "name": "Bedrock",
+      "start": 1792865309.9079838,
+      "end": 1792865310.354147
+    },
+    {
+      "id": "feeaacf42c9e3de1",
+      "parent_id": "2730c8d73a3dc0b0",
+      "name": "execute_tool retrieve_returns_policy",
+      "start": 1792865309.9228017,
+      "end": 1792865310.3583045
+    },
+    {
+      "id": "11921f44579a3556",
+      "parent_id": "feeaacf42c9e3de1",
+      "name": "Bedrock",
+      "start": 1792865309.9231327,
+      "end": 1792865310.3579257
+    },
+    {
+      "id": "033ad153081f47eb",
+      "parent_id": "11921f44579a3556",
+      "name": "Bedrock",
+      "start": 1792865309.9231327,
+      "end": 1792865310.3579257
+    },
+    {
+      "id": "c353d9325478bdb6",
+      "parent_id": "4b8fa8c49944f3d8",
+      "name": "execute_tool retrieve_shipping_policy",
+      "start": 1792865310.0813017,
+      "end": 1792865310.4595113
+    },
+    {
+      "id": "a825f4bfe7e1395d",
+      "parent_id": "c353d9325478bdb6",
+      "name": "Bedrock",
+      "start": 1792865310.0816274,
+      "end": 1792865310.4591515
+    },
+    {
+      "id": "14f74267289d84ae",
+      "parent_id": "a825f4bfe7e1395d",
+      "name": "Bedrock",
+      "start": 1792865310.0816274,
+      "end": 1792865310.4591515
+    },
+    {
+      "id": "638ae30b9f5cced8",
+      "parent_id": "e7345b829ec7156b",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865310.3551176,
+      "end": 1792865315.7581885
+    },
+    {
+      "id": "951619c2668e7d4a",
+      "parent_id": "638ae30b9f5cced8",
+      "name": "chat",
+      "start": 1792865310.3554335,
+      "end": 1792865315.7580037
+    },
+    {
+      "id": "58ba43937e3cb89d",
+      "parent_id": "951619c2668e7d4a",
+      "name": "BedrockRuntime",
+      "start": 1792865310.3559308,
+      "end": 1792865315.7575355
+    },
+    {
+      "id": "0f6091082960e674",
+      "parent_id": "58ba43937e3cb89d",
+      "name": "BedrockRuntime",
+      "start": 1792865310.3559308,
+      "end": 1792865315.7575355
+    },
+    {
+      "id": "0df871939d42de3d",
+      "parent_id": "493d77ad30a62ab2",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865310.3588483,
+      "end": 1792865316.671906
+    },
+    {
+      "id": "70d189f852746075",
+      "parent_id": "0df871939d42de3d",
+      "name": "chat",
+      "start": 1792865310.359172,
+      "end": 1792865316.6717207
+    },
+    {
+      "id": "ffc8de765ba85be9",
+      "parent_id": "70d189f852746075",
+      "name": "BedrockRuntime",
+      "start": 1792865310.35965,
+      "end": 1792865316.6711822
+    },
+    {
+      "id": "032f53a30cc7edc9",
+      "parent_id": "ffc8de765ba85be9",
+      "name": "BedrockRuntime",
+      "start": 1792865310.35965,
+      "end": 1792865316.6711822
+    },
+    {
+      "id": "8ff44203b37e6b3f",
+      "parent_id": "4344703cc994883f",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865310.4601126,
+      "end": 1792865317.1682038
+    },
+    {
+      "id": "630fa88dd4f59479",
+      "parent_id": "8ff44203b37e6b3f",
+      "name": "chat",
+      "start": 1792865310.4604094,
+      "end": 1792865317.16803
+    },
+    {
+      "id": "25c7ac51327cfc68",
+      "parent_id": "630fa88dd4f59479",
+      "name": "BedrockRuntime",
+      "start": 1792865310.4608934,
+      "end": 1792865317.1674647
+    },
+    {
+      "id": "2841f2361136d99a",
+      "parent_id": "25c7ac51327cfc68",
+      "name": "BedrockRuntime",
+      "start": 1792865310.4608934,
+      "end": 1792865317.1674647
+    },
+    {
+      "id": "0407a98d3cbede63",
+      "parent_id": "0f99bc39f7abcdbe",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865317.1720514,
+      "end": 1792865322.5961463
+    },
+    {
+      "id": "c5c317dd3e618d58",
+      "parent_id": "0407a98d3cbede63",
+      "name": "chat",
+      "start": 1792865317.17236,
+      "end": 1792865322.5959556
+    },
+    {
+      "id": "5221dde9fb74c404",
+      "parent_id": "c5c317dd3e618d58",
+      "name": "BedrockRuntime",
+      "start": 1792865317.1730034,
+      "end": 1792865322.5954008
+    },
+    {
+      "id": "3a3c5dc300b4153b",
+      "parent_id": "5221dde9fb74c404",
+      "name": "BedrockRuntime",
+      "start": 1792865317.1730034,
+      "end": 1792865322.5954008
+    },
+    {
+      "id": "42a3ea999549cbcb",
+      "parent_id": "89bbe1d2e512b648",
+      "name": "DynamoDB",
+      "start": 1792865322.5980403,
+      "end": 1792865322.6047897
+    },
+    {
+      "id": "2733a59305220cb8",
+      "parent_id": "42a3ea999549cbcb",
+      "name": "DynamoDB",
+      "start": 1792865322.5980403,
+      "end": 1792865322.6047897
+    },
+    {
+      "id": "6344b99c136d7662",
+      "parent_id": "89bbe1d2e512b648",
+      "name": "DynamoDB",
+      "start": 1792865322.6056254,
+      "end": 1792865322.610766
+    },
+    {
+      "id": "30ce894e37846b1d",
+      "parent_id": "6344b99c136d7662",
+      "name": "DynamoDB",
+      "start": 1792865322.6056254,
+      "end": 1792865322.610766
+    },
+    {
+      "id": "af83427e6797dce8",
+      "parent_id": "b51ad03e63e0345d",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865322.611463,
+      "end": 1792865330.0132985
+    },
+    {
+      "id": "91643737d6545cb6",
+      "parent_id": "af83427e6797dce8",
+      "name": "chat",
+      "start": 1792865322.6119676,
+      "end": 1792865323.873872
+    },
+    {
+      "id": "ea5148490cbf4453",
+      "parent_id": "91643737d6545cb6",
+      "name": "BedrockRuntime",
+      "start": 1792865322.6126153,
+      "end": 1792865323.8732326
+    },
+    {
+      "id": "06cf534f138d8a47",
+      "parent_id": "ea5148490cbf4453",
+      "name": "BedrockRuntime",
+      "start": 1792865322.6126153,
+      "end": 1792865323.8732326
+    },
+    {
+      "id": "f999c7aedb3c65b7",
+      "parent_id": "af83427e6797dce8",
+      "name": "execute_tool route_to_communication_agent",
+      "start": 1792865323.8742938,
+      "end": 1792865330.0129635
+    },
+    {
+      "id": "58ee2eb722f4d019",
+      "parent_id": "f999c7aedb3c65b7",
+      "name": "DynamoDB",
+      "start": 1792865323.8755403,
+      "end": 1792865323.880917
+    },
+    {
+      "id": "1b08b43a1094733f",
+      "parent_id": "58ee2eb722f4d019",
+      "name": "DynamoDB",
+      "start": 1792865323.8755403,
+      "end": 1792865323.880917
+    },
+    {
+      "id": "e13babaab2a0da6a",
+      "parent_id": "f999c7aedb3c65b7",
+      "name": "invoke_agent CommunicationAgent",
+      "start": 1792865323.8815272,
+      "end": 1792865329.6066976
+    },
+    {
+      "id": "8dba0be281d53e35",
+      "parent_id": "e13babaab2a0da6a",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865323.8817685,
+      "end": 1792865325.7849648
+    },
+    {
+      "id": "1ad0b20e18fd18e5",
+      "parent_id": "8dba0be281d53e35",
+      "name": "chat",
+      "start": 1792865323.8819802,
+      "end": 1792865325.77771
+    },
+    {
+      "id": "e753703168e81fc7",
+      "parent_id": "1ad0b20e18fd18e5",
+      "name": "BedrockRuntime",
+      "start": 1792865323.8824065,
+      "end": 1792865325.7771664
+    },
+    {
+      "id": "14cdd3f73bca76aa",
+      "parent_id": "e753703168e81fc7",
+      "name": "BedrockRuntime",
+      "start": 1792865323.8824065,
+      "end": 1792865325.7771664
+    },
+    {
+      "id": "f617e75d6bde0213",
+      "parent_id": "8dba0be281d53e35",
+      "name": "execute_tool get_full_workflow_context",
+      "start": 1792865325.7781,
+      "end": 1792865325.784588
+    },
+    {
+      "id": "2aa27bb4568958b2",
+      "parent_id": "f617e75d6bde0213",
+      "name": "DynamoDB",
+      "start": 1792865325.7793007,
+      "end": 1792865325.7842374
+    },
+    {
+      "id": "17dacfd407dd29d0",
+      "parent_id": "2aa27bb4568958b2",
+      "name": "DynamoDB",
+      "start": 1792865325.7793007,
+      "end": 1792865325.7842374
+    },
+    {
+      "id": "b5043d8e8309a75a",
+      "parent_id": "e13babaab2a0da6a",
+      "name": "execute_event_loop_cycle",
+      "start": 1792865325.7850852,
+      "end": 1792865329.6065242
+    },
+    {
+      "id": "f048bbe15ca48ef0",
+      "parent_id": "b5043d8e8309a75a",
+      "name": "chat",
+      "start": 1792865325.785385,
+      "end": 1792865329.6063225
+    },
+    {
+      "id": "9e8912c9431c184f",
+      "parent_id": "f048bbe15ca48ef0",
+      "name": "BedrockRuntime",
+      "start": 1792865325.7858796,
+      "end": 1792865329.6054006
+    },
+    {
+      "id": "28f8401c0132948a",
+      "parent_id": "9e8912c9431c184f",
+      "name": "BedrockRuntime",
+      "start": 1792865325.7858796,
+      "end": 1792865329.6054006
+    },
+    {
+      "id": "8b88586686edac8c",
+      "parent_id": "f999c7aedb3c65b7",
+      "name": "BedrockRuntime",
+      "start": 1792865329.6105492,
+      "end": 1792865329.997424
+    },
+    {
+      "id": "1a3554212c5c6df1",
+      "parent_id": "8b88586686edac8c",
+      "name": "BedrockRuntime",
+      "start": 1792865329.6105492,
+      "end": 1792865329.997424
+    },
+    {
+      "id": "e4a08b5ac4f494ee",
+      "parent_id": "f999c7aedb3c65b7",
+      "name": "DynamoDB",
+      "start": 1792865329.999572,
+      "end": 1792865330.0065577
+    },
+    {
+      "id": "21c3ca29334389bc",
+      "parent_id": "e4a08b5ac4f494ee",
+      "name": "DynamoDB",
+      "start": 1792865329.999572,
+      "end": 1792865330.0065577
+    },
+    {
+      "id": "3e1199c090d6a062",
+      "parent_id": "f999c7aedb3c65b7",
+      "name": "DynamoDB",
+      "start": 1792865330.0075343,
+      "end": 1792865330.0125587
+    },
+    {
+      "id": "1a310f950f287339",
+      "parent_id": "3e1199c090d6a062",
+      "name": "DynamoDB",
+      "start": 1792865330.0075343,
+      "end": 1792865330.0125587
+    },
+    {
+      "id": "b9f328910c9eabab",
+      "parent_id": "5aa432201e962d7a",
+      "name": "DynamoDB",
+      "start": 1792865330.015598,
+      "end": 1792865330.0212348
+    },
+    {
+      "id": "362548ea0b5cf11b",
+      "parent_id": "b9f328910c9eabab",
+      "name": "DynamoDB",
+      "start": 1792865330.015598,
+      "end": 1792865330.0212348
+    },
+    {
+      "id": "d4190a2c58716706",
+      "parent_id": "5aa432201e962d7a",
+      "name": "BedrockAgentCore",
+      "start": 1792865330.0256784,
+      "end": 1792865330.130443
+    },
+    {
+      "id": "30017fa63f792b2b",
+      "parent_id": "d4190a2c58716706",
+      "name": "BedrockAgentCore",
+      "start": 1792865330.0256784,
+      "end": 1792865330.130443
+    }
+  ],
+  "retriever_intervals": {
+    "ReturnsPolicyRetrieverAgent": {
+      "start": 1792865308.249766,
+      "end": 1792865316.6720817
+    },
+    "ShippingPolicyRetrieverAgent": {
+      "start": 1792865308.2488074,
+      "end": 1792865317.1683538
+    },
+    "WarrantyPolicyRetrieverAgent": {
+      "start": 1792865308.2531152,
+      "end": 1792865315.7583718
+    }
+  },
+  "retrievers_ran_concurrently": true
+}

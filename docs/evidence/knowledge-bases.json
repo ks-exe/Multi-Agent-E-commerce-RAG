@@ -1,0 +1,54 @@
+{
+  "returns": {
+    "source_files": 2,
+    "statistics": {
+      "numberOfDocumentsScanned": 2,
+      "numberOfMetadataDocumentsScanned": 0,
+      "numberOfNewDocumentsIndexed": 2,
+      "numberOfModifiedDocumentsIndexed": 0,
+      "numberOfMetadataDocumentsModified": 0,
+      "numberOfDocumentsDeleted": 0,
+      "numberOfDocumentsFailed": 0,
+      "numberOfDocumentsSkipped": 0
+    },
+    "retrieval_scores": [
+      0.7062836289405823,
+      0.6864812970161438,
+      0.6378970444202423
+    ]
+  },
+  "shipping": {
+    "source_files": 2,
+    "statistics": {
+      "numberOfDocumentsScanned": 2,
+      "numberOfMetadataDocumentsScanned": 0,
+      "numberOfNewDocumentsIndexed": 2,
+      "numberOfModifiedDocumentsIndexed": 0,
+      "numberOfMetadataDocumentsModified": 0,
+      "numberOfDocumentsDeleted": 0,
+      "numberOfDocumentsFailed": 0,
+      "numberOfDocumentsSkipped": 0
+    },
+    "retrieval_scores": [
+      0.6745144426822662,
+      0.624871164560318
+    ]
+  },
+  "warranty": {
+    "source_files": 2,
+    "statistics": {
+      "numberOfDocumentsScanned": 2,
+      "numberOfMetadataDocumentsScanned": 0,
+      "numberOfNewDocumentsIndexed": 2,
+      "numberOfModifiedDocumentsIndexed": 0,
+      "numberOfMetadataDocumentsModified": 0,
+      "numberOfDocumentsDeleted": 0,
+      "numberOfDocumentsFailed": 0,
+      "numberOfDocumentsSkipped": 0
+    },
+    "retrieval_scores": [
+      0.6618077456951141,
+      0.6437684297561646
+    ]
+  }
+}

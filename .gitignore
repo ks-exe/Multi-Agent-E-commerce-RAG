@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# ─────────────────────────────────────────────
+# Environment & Secrets
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─────────────────────────────────────────────
+# Claude Code session data
+# ─────────────────────────────────────────────
+.claude/
+
+# ─────────────────────────────────────────────
+# Test / runtime artifacts
+# ─────────────────────────────────────────────
+payload.json
+response.json
+
+.env
+.venv/
+.build/
+__pycache__/
+*.pyc
+artifacts/
+
+# Credentials, original course bundle, and local workspace history
+.aws/
+*.pem
+*.key
+1792768242/
+docs/BASELINE.md
+.tmp*
+.codex/
+.agents/
+.DS_Store
+Thumbs.db

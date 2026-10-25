@@ -1,0 +1,28 @@
+let buckets = Resources.*[ Type == 'AWS::S3::Bucket' ]
+rule private_encrypted_buckets when %buckets !empty {
+    %buckets.Properties {
+        PublicAccessBlockConfiguration {
+            BlockPublicAcls == true
+            BlockPublicPolicy == true
+            IgnorePublicAcls == true
+            RestrictPublicBuckets == true
+        }
+        BucketEncryption exists
+        VersioningConfiguration.Status == 'Enabled'
+    }
+}
+let logs = Resources.*[ Type == 'AWS::Logs::LogGroup' ]
+rule encrypted_logs_with_retention when %logs !empty {
+    %logs.Properties {
+        KmsKeyId exists
+        RetentionInDays == 14
+    }
+}
+let indexes = Resources.*[ Type == 'AWS::S3Vectors::Index' ]
+rule titan_vector_schema when %indexes !empty {
+    %indexes.Properties {
+        Dimension == 1024
+        DataType == 'float32'
+        DistanceMetric == 'cosine'
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "captured_at": "2026-10-24T18:08:24.343622+00:00",
+  "region": "us-east-1",
+  "evidence_type": "Deployed AWS run using synthetic customer and order fixtures",
+  "grader": {
+    "earned": 120,
+    "possible": 120,
+    "source_sha256": "b0aa1db9370be03e393a908a3f3272ba67f01cef90b6611ea1862091523205a5"
+  },
+  "guardrail_checks_passed": 8,
+  "total_spans": 398,
+  "scenarios": [
+    {
+      "trace_id": "1-6adcf3f9-e78993eb2f209d841d963973",
+      "route_history": [
+        "initialize_session",
+        "route_to_inventory_agent",
+        "route_to_refund_agent",
+        "route_to_communication_agent"
+      ],
+      "routing_passed": true,
+      "response": "Thank you for contacting NovaMart. I can confirm that your return request for order ORD-27176 (Wireless Headphones Pro) has already been processed today. \n\n**Your Return Reference Number:** RET-4B87FA96F36E\n\nYour return reason—defective left speaker—has been recorded. Please keep this reference number for your records as you complete the return process.\n\nIf you need assistance with shipping instructions or have any questions about the next steps, please let me know and I'll be happy to help!",
+      "workflow_version": 4,
+      "memory_event_count": 1,
+      "span_count": 86,
+      "routing_tools_traced": true,
+      "name": "Return request",
+      "question": "I want to return order ORD-27176 because the left speaker is defective."
+    },
+    {
+      "trace_id": "1-6adcf418-2b77e002bdda1745403b10db",
+      "route_history": [
+        "initialize_session",
+        "route_to_policy_agent",
+        "route_to_communication_agent"
+      ],
+      "routing_passed": true,
+      "response": "Thank you for your question! Here's the return policy for Premium customers at NovaMart:\n\n## Premium Return Benefits\n\n**Extended Return Window:**\nPremium customers receive a **60-day return window** – double the standard 30-day period.\n\n**Premium Tier Qualification:**\nCustomers automatically qualify for Premium tier when they:\n- Spend $500+ in a calendar year, OR\n- Place 20+ orders in a calendar year\n\n## Return Process\n\nIf you are a Premium customer, the return process is straightforward:\n1. Log in to your account and go to Order History\n2. Select the item and click \"Start Return\"\n3. Choose your reason for return\n4. Print the prepaid return shipping label\n5. Pack securely and drop off at an authorized carrier location\n6. Refunds are processed within 5-7 business days after we receive the return\n\nThe same item condition requirements apply (electronics must be in original packaging, clothing unworn with tags, etc.).\n\n## Additional Premium Benefits\n\nBeyond the extended return window, Premium customers also receive:\n- Free expedited shipping on all orders\n- 3-year warranty on electronics (vs. 2-year standard)\n- Priority customer support (response within 4 hours)\n- Early access to sales and new product launches\n- Dedicated account manager for orders over $500\n\n**Sources:** customer_tiers.txt and return_policy.txt\n\nIs there anything specific about the return process you'd like to know more about?",
+      "workflow_version": 3,
+      "memory_event_count": 1,
+      "span_count": 101,
+      "routing_tools_traced": true,
+      "name": "Premium policy",
+      "question": "What is the return policy for Premium customers?"
+    },
+    {
+      "trace_id": "1-6adcf437-f607376cace50b52f87563a9",
+      "route_history": [
+        "initialize_session",
+        "route_to_communication_agent"
+      ],
+      "routing_passed": true,
+      "response": "Hello! I'd be happy to help you with that calculation.\n\n**Here's the breakdown:**\n\n- 5 items at $29.99 each = 5 × $29.99 = $149.95\n- 10% discount = $149.95 × 0.10 = $14.995\n- **Final price after discount = $149.95 - $14.995 = $134.96**\n\nSo 5 items at $29.99 with a 10% discount would cost **$134.96**.\n\nIs there anything else I can help you with today?",
+      "workflow_version": 2,
+      "memory_event_count": 1,
+      "span_count": 44,
+      "routing_tools_traced": true,
+      "name": "Discount arithmetic",
+      "question": "How much are 5 items at $29.99 with 10% off?"
+    },
+    {
+      "trace_id": "1-6adcf443-76fe008fc1437ba09c95e257",
+      "route_history": [
+        "initialize_session",
+        "route_to_inventory_agent",
+        "route_to_communication_agent"
+      ],
+      "routing_passed": true,
+      "response": "Hello David,\n\nThank you for reaching out! I've checked your account, and you are currently on the **Standard** tier. You are not a Premium member at this time.\n\nIf you have any questions about upgrading to Premium or would like to know more about the benefits, feel free to ask!",
+      "workflow_version": 3,
+      "memory_event_count": 1,
+      "span_count": 67,
+      "routing_tools_traced": true,
+      "name": "Account tier",
+      "question": "What is my current tier? Am I Premium?"
+    },
+    {
+      "trace_id": "1-6adcf458-b61323106caf0633c36d0857",
+      "route_history": [
+        "initialize_session",
+        "route_to_inventory_agent",
+        "route_to_refund_agent",
+        "route_to_communication_agent"
+      ],
+      "routing_passed": true,
+      "response": "Thank you for contacting NovaMart! I'm happy to help you with order ORD-28001.\n\n**Order Status:**\n- **Order ID:** ORD-28001\n- **Order Date:** September 8, 2026\n- **Status:** Delivered\n- **Product:** Running Shoes X200\n- **Price:** $89.99\n- **Quantity:** 1\n- **Tracking Number:** TRK000028001\n- **Estimated Delivery Date:** September 13, 2026\n\nYour order has been successfully delivered. If you have any concerns about the delivery or the product itself, please let me know and I'll be glad to assist you further!",
+      "workflow_version": 4,
+      "memory_event_count": 1,
+      "span_count": 100,
+      "routing_tools_traced": true,
+      "name": "Order status",
+      "question": "What is the status of order ORD-28001?"
+    }
+  ]
+}
