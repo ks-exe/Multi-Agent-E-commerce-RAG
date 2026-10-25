@@ -16,10 +16,19 @@ not a continuous health check.
 AWS artifacts. The default `python tools/build_portfolio.py` embeds the committed
 public data into `docs/index.html`; it makes no AWS calls.
 
-The three PNGs under `docs/images/` are real headless-browser screenshots of that
-viewer, captured with `tools/capture_portfolio.mjs`. The viewer plots actual span
-timestamps and displays captured model responses. Scenario questions are concise
-descriptions of the requests, while response text is preserved from the run.
+`overview.png`, `trace.png`, and `conversations.png` are real headless-browser
+screenshots of that viewer, captured with `tools/capture_portfolio.mjs`. The
+viewer plots actual span timestamps and displays captured model responses.
+Scenario questions are concise descriptions of the requests, while response
+text is preserved from the run.
+
+`aws-xray-service-map.png` and `aws-policy-agent-spans.png` are **actual AWS
+Console screenshots**, captured from a fresh deployed policy request on
+26 October 2026 PKT (25 October UTC). Its trace ID is
+`1-6ade8235-b9e542f95bb170852565722e`. They show the per-request service graph
+and the filtered agent span list. Only account navigation and whitespace were
+cropped; no trace text, counts, status, or timing data was edited. The saved
+24 October viewer snapshot above remains unchanged.
 
 The 398-span total includes agent, tool, runtime, and AWS SDK spans across five
 requests. The policy request accounts for 101 spans. Three-way overlap is

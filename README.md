@@ -47,6 +47,23 @@ The evidence viewer includes all five saved responses. The discount example corr
 
 </details>
 
+### Captured in the AWS Console
+
+The screenshots below were captured directly from **CloudWatch's X-Ray trace view** after a fresh deployed run on **26 October 2026 PKT (25 October UTC)**. The policy request contains **101 spans**, with **zero faults, errors, or throttles**. AWS groups the Strands agents under the NovaMart service, so the span list shows their individual names.
+
+![Actual AWS Console showing OrchestratorAgent, PolicyAgent, three policy retrievers, and CommunicationAgent with OK status](docs/images/aws-policy-agent-spans.png)
+
+<details>
+<summary><strong>View the actual AWS service graph for this request</strong></summary>
+
+![Actual AWS X-Ray trace graph showing NovaMart-Orchestrator calling Bedrock Runtime, Bedrock retrieval, DynamoDB, and AgentCore](docs/images/aws-xray-service-map.png)
+
+The graph is the **per-request Trace Map** opened from Trace details. Account navigation and excess whitespace were cropped; the trace data was not changed. The aggregate Trace Map can be empty when a request is not selected for indexing. Direct trace retrieval displayed this request without changing the account's indexing rule.
+
+</details>
+
+Trace: [`1-6ade8235-b9e542f95bb170852565722e`](https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6ade8235-b9e542f95bb170852565722e) (AWS sign-in required). See the [capture instructions](docs/SUBMISSION.md) to reproduce these views.
+
 ## Architecture
 
 ```mermaid
@@ -179,7 +196,7 @@ This is a deployed capstone and portfolio implementation. A customer application
 
 `src/agentcore_cli.py` is a project adapter over current AgentCore control APIs. `aws_compat.py` maps the original grader's legacy read methods to actual AWS resource configuration; it does not fabricate results. The grader's older Claude 3 display labels are retained, while the configured and live-verified models are Claude 4.5.
 
-The course also requires an **AWS Console X-Ray Service Map screenshot**. The portfolio viewer screenshots are separate evidence; see the [submission checklist](docs/SUBMISSION.md).
+The **AWS Console trace graph and named agent spans** are included above for course submission, alongside the separate portfolio viewer screenshots. See the [submission checklist](docs/SUBMISSION.md).
 
 ## Attribution
 

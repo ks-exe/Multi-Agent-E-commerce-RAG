@@ -17,5 +17,6 @@ B0AA1DB9370BE03E393A908A3F3272BA67F01CEF90B6611EA1862091523205A5
 ```
 
 Customer names, orders, and responses in the demonstration use synthetic data.
-The evidence viewer and its screenshots are original presentation assets built
-from the saved execution results. They are not AWS Console screenshots.
+The evidence viewer and its three screenshots are original presentation assets
+built from the saved execution results. Separate files prefixed `aws-` under
+`docs/images/` are actual AWS Console captures with account navigation cropped.
