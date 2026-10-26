@@ -1,0 +1,13 @@
+
+───────────────────────────────────────────────────────
+  Task 6 - Observability
+───────────────────────────────────────────────────────
+  ✓ PASS [+10pts] CloudWatch logging is enabled for the AgentCore runtime
+  ✓ PASS [+10pts] X-Ray tracing is enabled for the AgentCore runtime
+
+═══════════════════════════════════════════════════════
+  Score: 20/20 pts (100%)
+═══════════════════════════════════════════════════════
+
+  🎉 Perfect score! All tasks complete.
+

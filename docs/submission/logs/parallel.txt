@@ -1,0 +1,281 @@
+Live Task 5 supplement: real Sonnet agents and three Bedrock Knowledge Bases.
+    [PARALLEL RETRIEVAL - START]  Spawning 3 sub-agents concurrently via ThreadPoolExecutor
+    ──────────────────────────────────────────────────────
+    +-- [SUB-AGENT 01]  ReturnsRetriever   KB-ID: XZ38YZEVM9
+    +-- [SUB-AGENT 02]  ShippingRetriever  KB-ID: NOUBGNAIZF
+    +-- [SUB-AGENT 03]  WarrantyRetriever  KB-ID: DDSNJMEKAF
+    Retrieving in parallel... (sub-agent output suppressed - clean results printed sequentially after [END])
+    ──────────────────────────────────────────────────────
+    [PARALLEL RETRIEVAL - END]  All 3 KBs responded  Elapsed: 21.1s
+
+    [SUB-AGENT 01]  ReturnsRetriever   KB: XZ38YZEVM9
+      | Based on the retrieved policy documents, here's a comprehensive overview of NovaMart's policies for Standard and Premium customers:
+      | ## **Return Windows**
+      | **Standard Customers:** 30-day return window from the order date  
+      | **Premium Customers:** Extended 60-day return window
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/return_policy.txt and s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+      | ---
+      | ## **Shipping Charges & Delivery Times**
+      | **Standard Customers:** Standard shipping rates apply  
+      | **Premium Customers:** Free expedited shipping on all orders
+      | *Note: The retrieved policy documents specify shipping charges but do not provide specific delivery timeframes or standard shipping costs.*
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+      | ---
+      | ## **Warranty Coverage**
+      | **Standard Customers:** 2-year warranty on electronics  
+      | **Premium Customers:** 3-year warranty on electronics
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+      | ---
+      | ## **Premium Tier Requirements**
+      | Customers are automatically upgraded to Premium when they:
+      | - Spend $500+ in a calendar year, OR
+      | - Place 20+ orders in a calendar year
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+      | ---
+      | **Note:** The policy documents do not specify exact delivery times or standard shipping costs. For complete shipping details, you may need to contact NovaMart customer support at support@novamart.example.com or 1-800-NOVA-456.
+
+    [SUB-AGENT 02]  ShippingRetriever  KB: NOUBGNAIZF
+      | Based on the retrieved policy documents, here's a comprehensive breakdown of NovaMart's policies for Standard and Premium customers:
+      | ## **Return Windows**
+      | **Standard Customers:** 30-day return window  
+      | **Premium Customers:** Extended 60-day return window
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+      | ---
+      | ## **Shipping Charges**
+      | **Standard Customers:**
+      | - Standard Shipping (5-7 business days): Free on orders over $50, otherwise $4.99
+      | - Expedited Shipping (2-3 business days): $9.99
+      | - Overnight Shipping (next business day): $24.99
+      | - Same-Day Delivery (select metros): $14.99
+      | **Premium Customers:**
+      | - Free expedited shipping on all orders
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/shipping_policy.txt*
+      | ---
+      | ## **Delivery Times**
+      | **Standard Customers:**
+      | - Standard Shipping: 5-7 business days
+      | - Expedited Shipping: 2-3 business days
+      | - Overnight Shipping: Next business day
+      | - Same-Day Delivery: Same day (select metros only)
+      | **Premium Customers:**
+      | - 2-3 business days (via free expedited shipping on all orders)
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/shipping_policy.txt*
+      | ---
+      | ## **Warranty Coverage**
+      | **Standard Customers:** 2-year warranty on electronics  
+      | **Premium Customers:** 3-year warranty on electronics
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+      | ---
+      | ## **Premium Tier Requirements**
+      | Customers are automatically upgraded to Premium when they:
+      | - Spend $500+ in a calendar year, OR
+      | - Place 20+ orders in a calendar year
+      | *Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+
+    [SUB-AGENT 03]  WarrantyRetriever  KB: DDSNJMEKAF
+      | Based on the retrieved policy documents, here's a comprehensive overview of NovaMart's policies for Standard and Premium customers:
+      | ## **Return Windows**
+      | **Standard Customers:** 30-day return window  
+      | **Premium Customers:** Extended 60-day return window
+      | **Source:** s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+      | ---
+      | ## **Shipping Charges**
+      | **Standard Customers:** Standard shipping rates apply (specific dollar amounts not detailed in retrieved policies)  
+      | **Premium Customers:** Free expedited shipping on all orders
+      | **Source:** s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+      | ---
+      | ## **Delivery Times**
+      | The retrieved policies indicate that Premium customers receive "expedited shipping," but **specific delivery timeframes** (e.g., 2-3 days, 5-7 days) are not provided in the available policy documents for either tier.
+      | ---
+      | ## **Warranty Coverage**
+      | ### Standard Customers:
+      | - **General products:** 1-year limited warranty against manufacturing defects
+      | - **Electronics:** 2-year warranty
+      | ### Premium Customers:
+      | - **General products:** 1-year limited warranty (same as Standard)
+      | - **Electronics:** 3-year warranty (upgraded from 2 years)
+      | ### What's Covered (Both Tiers):
+      | - Manufacturing defects
+      | - Hardware failures under normal use
+      | - Defective materials
+      | ### What's NOT Covered (Both Tiers):
+      | - Damage from accidents, misuse, or negligence
+      | - Normal wear and tear
+      | - Water damage (unless product is rated waterproof)
+      | - Unauthorized modifications or repairs
+      | - Cosmetic damage (scratches, dents)
+      | **Sources:** 
+      | - s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/warranty_policy.txt
+      | - s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+      | ---
+      | **Note:** The specific dollar amounts for standard shipping charges and exact delivery timeframes were not found in the retrieved policy documents.
+PASS Returns: KB XZ38YZEVM9, 3 passages; synthesized section and source present.
+PASS Shipping: KB NOUBGNAIZF, 2 passages; synthesized section and source present.
+PASS Warranty: KB DDSNJMEKAF, 2 passages; synthesized section and source present.
+PASS ReturnsPolicyRetrieverAgent: 16.286s
+PASS ShippingPolicyRetrieverAgent: 16.126s
+PASS WarrantyPolicyRetrieverAgent: 20.822s
+PASS all three retriever agents overlapped for 15.898s.
+
+Synthesized tool output:
+Returns policy:
+Based on the retrieved policy documents, here's a comprehensive overview of NovaMart's policies for Standard and Premium customers:
+
+## **Return Windows**
+
+**Standard Customers:** 30-day return window from the order date  
+**Premium Customers:** Extended 60-day return window
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/return_policy.txt and s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+
+---
+
+## **Shipping Charges & Delivery Times**
+
+**Standard Customers:** Standard shipping rates apply  
+**Premium Customers:** Free expedited shipping on all orders
+
+*Note: The retrieved policy documents specify shipping charges but do not provide specific delivery timeframes or standard shipping costs.*
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+
+---
+
+## **Warranty Coverage**
+
+**Standard Customers:** 2-year warranty on electronics  
+**Premium Customers:** 3-year warranty on electronics
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+
+---
+
+## **Premium Tier Requirements**
+
+Customers are automatically upgraded to Premium when they:
+- Spend $500+ in a calendar year, OR
+- Place 20+ orders in a calendar year
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/customer_tiers.txt*
+
+---
+
+**Note:** The policy documents do not specify exact delivery times or standard shipping costs. For complete shipping details, you may need to contact NovaMart customer support at support@novamart.example.com or 1-800-NOVA-456.
+
+Shipping policy:
+Based on the retrieved policy documents, here's a comprehensive breakdown of NovaMart's policies for Standard and Premium customers:
+
+## **Return Windows**
+
+**Standard Customers:** 30-day return window  
+**Premium Customers:** Extended 60-day return window
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+
+---
+
+## **Shipping Charges**
+
+**Standard Customers:**
+- Standard Shipping (5-7 business days): Free on orders over $50, otherwise $4.99
+- Expedited Shipping (2-3 business days): $9.99
+- Overnight Shipping (next business day): $24.99
+- Same-Day Delivery (select metros): $14.99
+
+**Premium Customers:**
+- Free expedited shipping on all orders
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/shipping_policy.txt*
+
+---
+
+## **Delivery Times**
+
+**Standard Customers:**
+- Standard Shipping: 5-7 business days
+- Expedited Shipping: 2-3 business days
+- Overnight Shipping: Next business day
+- Same-Day Delivery: Same day (select metros only)
+
+**Premium Customers:**
+- 2-3 business days (via free expedited shipping on all orders)
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/shipping_policy.txt*
+
+---
+
+## **Warranty Coverage**
+
+**Standard Customers:** 2-year warranty on electronics  
+**Premium Customers:** 3-year warranty on electronics
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+
+---
+
+## **Premium Tier Requirements**
+
+Customers are automatically upgraded to Premium when they:
+- Spend $500+ in a calendar year, OR
+- Place 20+ orders in a calendar year
+
+*Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/customer_tiers.txt*
+
+Warranty policy:
+Based on the retrieved policy documents, here's a comprehensive overview of NovaMart's policies for Standard and Premium customers:
+
+## **Return Windows**
+
+**Standard Customers:** 30-day return window  
+**Premium Customers:** Extended 60-day return window
+
+**Source:** s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+
+---
+
+## **Shipping Charges**
+
+**Standard Customers:** Standard shipping rates apply (specific dollar amounts not detailed in retrieved policies)  
+**Premium Customers:** Free expedited shipping on all orders
+
+**Source:** s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+
+---
+
+## **Delivery Times**
+
+The retrieved policies indicate that Premium customers receive "expedited shipping," but **specific delivery timeframes** (e.g., 2-3 days, 5-7 days) are not provided in the available policy documents for either tier.
+
+---
+
+## **Warranty Coverage**
+
+### Standard Customers:
+- **General products:** 1-year limited warranty against manufacturing defects
+- **Electronics:** 2-year warranty
+
+### Premium Customers:
+- **General products:** 1-year limited warranty (same as Standard)
+- **Electronics:** 3-year warranty (upgraded from 2 years)
+
+### What's Covered (Both Tiers):
+- Manufacturing defects
+- Hardware failures under normal use
+- Defective materials
+
+### What's NOT Covered (Both Tiers):
+- Damage from accidents, misuse, or negligence
+- Normal wear and tear
+- Water damage (unless product is rated waterproof)
+- Unauthorized modifications or repairs
+- Cosmetic damage (scratches, dents)
+
+**Sources:** 
+- s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/warranty_policy.txt
+- s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/customer_tiers.txt
+
+---
+
+**Note:** The specific dollar amounts for standard shipping charges and exact delivery timeframes were not found in the retrieved policy documents.
+
+PASS live parallel retrieval: all three Knowledge Bases returned grounded results.

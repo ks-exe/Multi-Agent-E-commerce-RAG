@@ -34,6 +34,12 @@ def main():
         name = 'novamart-' + domain + '-policy-kb'
         if name in existing:
             kb_id = existing[name]['knowledgeBaseId']
+            kb = agent.get_knowledge_base(knowledgeBaseId=kb_id)['knowledgeBase']
+            settings = kb['storageConfiguration'].get('s3VectorsConfiguration', {})
+            if not (settings.get('indexArn') == index['indexArn'] or (
+                    settings.get('vectorBucketArn') == vector_bucket['vectorBucketArn']
+                    and settings.get('indexName') == index_name)):
+                raise ValueError(f'{name} points to an unexpected backing store.')
         else:
             response = agent.create_knowledge_base(
                 name=name, roleArn=role,
@@ -42,7 +48,7 @@ def main():
                     'embeddingModelConfiguration': {'bedrockEmbeddingModelConfiguration': {
                         'dimensions': 1024, 'embeddingDataType': 'FLOAT32'}}}},
                 storageConfiguration={'type': 'S3_VECTORS', 's3VectorsConfiguration': {
-                    'vectorBucketArn': vector_bucket['vectorBucketArn'], 'indexName': index_name}})
+                    'indexArn': index['indexArn']}})
             kb_id = response['knowledgeBase']['knowledgeBaseId']
         deadline = time.monotonic() + 300
         while True:

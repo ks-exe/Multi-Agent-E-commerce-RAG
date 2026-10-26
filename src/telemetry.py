@@ -1,6 +1,5 @@
 """ADOT exports real Strands and AWS SDK spans to X-Ray, with correlated CloudWatch logs."""
 import logging
-import os
 import threading
 from contextlib import contextmanager
 
@@ -56,6 +55,23 @@ def flush():
         _provider.force_flush(timeout_millis=30000)
     if _log_provider:
         _log_provider.force_flush(timeout_millis=30000)
+
+@contextmanager
+def agent_call(agent_name):
+    """Trace a logical agent dependency around its actual synchronous invocation.
+
+    X-Ray infers named dependency nodes from CLIENT spans with peer.service.
+    These agents execute in the same runtime, not separate network services;
+    novamart.agent.execution makes that distinction explicit in the trace.
+    Native Strands spans remain children, preserving model/tool timings.
+    """
+    from opentelemetry import trace
+    with trace.get_tracer('novamart.agent-delegation').start_as_current_span(
+            'delegate ' + agent_name, kind=trace.SpanKind.CLIENT,
+            attributes={'peer.service': agent_name,
+                        'gen_ai.agent.name': agent_name,
+                        'novamart.agent.execution': 'in_process'}) as span:
+        yield span
 
 @contextmanager
 def request_span(session_id):

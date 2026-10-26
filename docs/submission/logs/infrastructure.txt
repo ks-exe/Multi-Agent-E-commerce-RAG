@@ -1,0 +1,20 @@
+PASS novamart-returns-policy-kb: XZ38YZEVM9 ACTIVE; Titan Text Embeddings v2
+  Backing bucket: udacity-agentcore-vectors-731451715213-0eadcb60
+  Index: returns-policy-index; dimension=1024; distance=cosine
+  Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/returns/
+  Sync: COMPLETE; failed documents=0; job=CSDKV7VMLO
+PASS novamart-shipping-policy-kb: NOUBGNAIZF ACTIVE; Titan Text Embeddings v2
+  Backing bucket: udacity-agentcore-vectors-731451715213-0eadcb60
+  Index: shipping-policy-index; dimension=1024; distance=cosine
+  Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/shipping/
+  Sync: COMPLETE; failed documents=0; job=ZGEVUN3XCN
+PASS novamart-warranty-policy-kb: DDSNJMEKAF ACTIVE; Titan Text Embeddings v2
+  Backing bucket: udacity-agentcore-vectors-731451715213-0eadcb60
+  Index: warranty-policy-index; dimension=1024; distance=cosine
+  Source: s3://udacity-agentcore-policy-docs-731451715213-0eadcb60/policies/warranty/
+  Sync: COMPLETE; failed documents=0; job=1KPEPNJIOI
+PASS runtime version 6: READY / PUBLIC / HTTP; required environment matches .env/config.
+PASS memory: ACTIVE; summarization strategy; 7-day retention.
+PASS guardrail: xwzpen5377y0, numbered version 2.
+PASS observability: CloudWatch INFO; always-on X-Ray sampling; trace storage checked.
+Saved actual API metadata to docs/submission/deployment.json

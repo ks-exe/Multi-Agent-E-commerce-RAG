@@ -1,0 +1,209 @@
+[
+  {
+    "session_id": "48ef3fed-74ab-458e-b36b-cbca86dd1281",
+    "customer_id": "CUST-001",
+    "trace_id": "1-6adf5982-5be1e6d6cd30e6699f4c27e4",
+    "route_history": [
+      "initialize_session",
+      "route_to_inventory_agent",
+      "route_to_refund_agent",
+      "route_to_communication_agent"
+    ],
+    "routing_passed": true,
+    "response": "Thank you for contacting NovaMart, Alice. \n\nI can confirm that your return request for order ORD-27176 (Wireless Headphones Pro) has already been submitted on October 24, 2026, due to the defective left speaker. \n\nYour return reference number is **RET-4B87FA96F36E**. Please keep this number for your records\u2014you can use it to track the status of your return.\n\nIf you have any questions about the return process or need further assistance, please don't hesitate to ask!",
+    "workflow_version": 4,
+    "memory_event_count": 1,
+    "span_count": 99,
+    "span_names": [
+      "BedrockAgentCore",
+      "BedrockRuntime",
+      "CommunicationAgent",
+      "DynamoDB",
+      "InventoryAgent",
+      "NovaMart-Orchestrator",
+      "RefundAgent",
+      "chat",
+      "execute_event_loop_cycle",
+      "execute_tool check_order_status",
+      "execute_tool get_customer_tier",
+      "execute_tool get_full_workflow_context",
+      "execute_tool get_inventory_context",
+      "execute_tool initialize_session",
+      "execute_tool route_to_communication_agent",
+      "execute_tool route_to_inventory_agent",
+      "execute_tool route_to_refund_agent",
+      "invoke_agent CommunicationAgent",
+      "invoke_agent InventoryAgent",
+      "invoke_agent OrchestratorAgent",
+      "invoke_agent RefundAgent"
+    ],
+    "routing_tools_traced": true,
+    "trace_url": "https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf5982-5be1e6d6cd30e6699f4c27e4"
+  },
+  {
+    "session_id": "e834fe5c-fe37-4e1f-98ee-c555b2f32f26",
+    "customer_id": "CUST-002",
+    "trace_id": "1-6adf59a2-8986522044a491fdd8722990",
+    "route_history": [
+      "initialize_session",
+      "route_to_policy_agent",
+      "route_to_communication_agent"
+    ],
+    "routing_passed": true,
+    "response": "Thank you for reaching out to NovaMart! I'm happy to explain our return policy for Premium customers.\n\n## **Premium Customer Return Policy**\n\n**Extended Return Window:**\nPremium customers receive a **60-day return window** \u2013 double the standard 30-day period for regular customers.\n\n**How Premium Status Works:**\nCustomers are automatically upgraded to Premium tier when they meet either threshold:\n- Spend $500+ in a calendar year, OR\n- Place 20+ orders in a calendar year\n\nTier status is evaluated on a rolling 12-month basis.\n\n## **Return Process**\nThe return process is straightforward:\n1. Log in to your account and go to Order History\n2. Select the item and click \"Start Return\"\n3. Choose your return reason\n4. Print the prepaid return shipping label\n5. Pack the item and drop off at an authorized carrier\n6. Refunds are processed within 5-7 business days\n\n## **Additional Premium Benefits**\nBeyond the extended return window, Premium customers also enjoy:\n- Free expedited shipping on all orders\n- 3-year warranty on electronics (vs. 2-year standard)\n- Priority customer support with response within 4 hours\n- Early access to sales and new product launches\n- Dedicated account manager for orders over $500\n\nIs there anything specific about the return process or Premium benefits you'd like to know more about?",
+    "workflow_version": 3,
+    "memory_event_count": 1,
+    "span_count": 111,
+    "span_names": [
+      "Bedrock",
+      "BedrockAgentCore",
+      "BedrockRuntime",
+      "CommunicationAgent",
+      "DynamoDB",
+      "NovaMart-Orchestrator",
+      "PolicyAgent",
+      "ReturnsPolicyRetrieverAgent",
+      "ShippingPolicyRetrieverAgent",
+      "WarrantyPolicyRetrieverAgent",
+      "chat",
+      "execute_event_loop_cycle",
+      "execute_tool get_full_workflow_context",
+      "execute_tool initialize_session",
+      "execute_tool retrieve_returns_policy",
+      "execute_tool retrieve_shipping_policy",
+      "execute_tool retrieve_warranty_policy",
+      "execute_tool route_to_communication_agent",
+      "execute_tool route_to_policy_agent",
+      "execute_tool search_all_policies",
+      "invoke_agent CommunicationAgent",
+      "invoke_agent OrchestratorAgent",
+      "invoke_agent PolicyAgent",
+      "invoke_agent ReturnsPolicyRetrieverAgent",
+      "invoke_agent ShippingPolicyRetrieverAgent",
+      "invoke_agent WarrantyPolicyRetrieverAgent"
+    ],
+    "routing_tools_traced": true,
+    "trace_url": "https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59a2-8986522044a491fdd8722990",
+    "retriever_intervals": {
+      "ReturnsPolicyRetrieverAgent": {
+        "start": 1793022374.7016652,
+        "end": 1793022382.5742118
+      },
+      "ShippingPolicyRetrieverAgent": {
+        "start": 1793022374.7021203,
+        "end": 1793022383.1818626
+      },
+      "WarrantyPolicyRetrieverAgent": {
+        "start": 1793022374.7024283,
+        "end": 1793022382.6274366
+      }
+    },
+    "retrievers_ran_concurrently": true
+  },
+  {
+    "session_id": "fb2b46bc-3401-49d7-9513-26a1ae1eedef",
+    "customer_id": "CUST-003",
+    "trace_id": "1-6adf59c1-d5a071fa4a1cb1dfd2ea3172",
+    "route_history": [
+      "initialize_session",
+      "route_to_communication_agent"
+    ],
+    "routing_passed": true,
+    "response": "Thank you for your question! Let me calculate that for you.\n\n**Calculation:**\n- 5 items at $29.99 each = 5 \u00d7 $29.99 = $149.95\n- 10% discount = $149.95 \u00d7 0.10 = $14.995\n- Final price = $149.95 - $14.995 = **$134.96**\n\nSo 5 items at $29.99 each with a 10% discount would cost **$134.96**.\n\nIs there anything else I can help you with today?",
+    "workflow_version": 2,
+    "memory_event_count": 1,
+    "span_count": 46,
+    "span_names": [
+      "BedrockAgentCore",
+      "BedrockRuntime",
+      "CommunicationAgent",
+      "DynamoDB",
+      "NovaMart-Orchestrator",
+      "chat",
+      "execute_event_loop_cycle",
+      "execute_tool get_full_workflow_context",
+      "execute_tool initialize_session",
+      "execute_tool route_to_communication_agent",
+      "invoke_agent CommunicationAgent",
+      "invoke_agent OrchestratorAgent"
+    ],
+    "routing_tools_traced": true,
+    "trace_url": "https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59c1-d5a071fa4a1cb1dfd2ea3172"
+  },
+  {
+    "session_id": "e58e72bd-244e-4e56-8d56-fc1f351c611c",
+    "customer_id": "CUST-004",
+    "trace_id": "1-6adf59cd-49b6491c1d6f45e68a68fc08",
+    "route_history": [
+      "initialize_session",
+      "route_to_inventory_agent",
+      "route_to_communication_agent"
+    ],
+    "routing_passed": true,
+    "response": "Hello! I've checked your account details. You are currently on the **Standard** tier, not Premium. Your account has been with us since January 2023, and you've placed 5 orders.\n\nIs there anything else I can help you with today?",
+    "workflow_version": 3,
+    "memory_event_count": 1,
+    "span_count": 71,
+    "span_names": [
+      "BedrockAgentCore",
+      "BedrockRuntime",
+      "CommunicationAgent",
+      "DynamoDB",
+      "InventoryAgent",
+      "NovaMart-Orchestrator",
+      "chat",
+      "execute_event_loop_cycle",
+      "execute_tool get_customer_tier",
+      "execute_tool get_full_workflow_context",
+      "execute_tool initialize_session",
+      "execute_tool route_to_communication_agent",
+      "execute_tool route_to_inventory_agent",
+      "invoke_agent CommunicationAgent",
+      "invoke_agent InventoryAgent",
+      "invoke_agent OrchestratorAgent"
+    ],
+    "routing_tools_traced": true,
+    "trace_url": "https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59cd-49b6491c1d6f45e68a68fc08"
+  },
+  {
+    "session_id": "c8928261-ad6d-4982-b2cb-851be46d2fa5",
+    "customer_id": "CUST-002",
+    "trace_id": "1-6adf59de-462a3d20334ee8ce85c1acce",
+    "route_history": [
+      "initialize_session",
+      "route_to_inventory_agent",
+      "route_to_refund_agent",
+      "route_to_communication_agent"
+    ],
+    "routing_passed": true,
+    "response": "Thank you for contacting NovaMart! \n\nYour order **ORD-28001** has been **delivered**. Here are the details:\n\n- **Order Date:** September 8, 2026\n- **Product:** Running Shoes X200\n- **Price:** $89.99\n- **Quantity:** 1\n- **Tracking Number:** TRK000028001\n- **Estimated Delivery Date:** September 13, 2026\n\nIf you have any questions or concerns about this order, please let me know and I'll be happy to help!",
+    "workflow_version": 4,
+    "memory_event_count": 1,
+    "span_count": 106,
+    "span_names": [
+      "BedrockAgentCore",
+      "BedrockRuntime",
+      "CommunicationAgent",
+      "DynamoDB",
+      "InventoryAgent",
+      "NovaMart-Orchestrator",
+      "RefundAgent",
+      "chat",
+      "execute_event_loop_cycle",
+      "execute_tool check_order_status",
+      "execute_tool get_customer_tier",
+      "execute_tool get_full_workflow_context",
+      "execute_tool get_inventory_context",
+      "execute_tool initialize_session",
+      "execute_tool route_to_communication_agent",
+      "execute_tool route_to_inventory_agent",
+      "execute_tool route_to_refund_agent",
+      "invoke_agent CommunicationAgent",
+      "invoke_agent InventoryAgent",
+      "invoke_agent OrchestratorAgent",
+      "invoke_agent RefundAgent"
+    ],
+    "routing_tools_traced": true,
+    "trace_url": "https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59de-462a3d20334ee8ce85c1acce"
+  }
+]

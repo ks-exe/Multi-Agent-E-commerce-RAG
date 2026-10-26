@@ -1,0 +1,41 @@
+
+============================================================
+  Deploying Enterprise Multi-Agent System
+============================================================
+
+Step 1/5: Building agent graph...
+  All 5 agents initialized
+
+Step 2/5: Creating Bedrock Guardrail...
+  Guardrail: xwzpen5377y0 (version 2)
+
+Step 3/5: Deploying to AgentCore Runtime...
+  Packaged 500 dependency files
+  Packaged 1000 dependency files
+  Packaged 1500 dependency files
+  Packaged 2000 dependency files
+  Packaged 2500 dependency files
+  Packaged 3000 dependency files
+  Packaged 3500 dependency files
+  Packaged 4000 dependency files
+  Packaged 4500 dependency files
+  Packaged 5000 dependency files
+  Artifact ready: 40 MiB
+  Runtime status: UPDATING
+  Runtime deployed: arn:aws:bedrock-agentcore:us-east-1:731451715213:runtime/udacity_agentcore_runtime-KU6jXlAxgf
+
+Step 4/5: Configuring Memory...
+  Memory ACTIVE: arn:aws:bedrock-agentcore:us-east-1:731451715213:memory/udacity_agentcore_memory-7Mm9Z27lAf
+
+Step 5/5: Configuring Observability...
+  CloudWatch: /aws/bedrock/agentcore/udacity-agentcore (INFO); X-Ray sampling: 100%
+
+============================================================
+  Deployment Complete!
+============================================================
+
+  Add these to your .env file:
+  AGENTCORE_RUNTIME_ARN=arn:aws:bedrock-agentcore:us-east-1:731451715213:runtime/udacity_agentcore_runtime-KU6jXlAxgf
+  GUARDRAIL_ID=xwzpen5377y0
+  GUARDRAIL_VERSION=2
+

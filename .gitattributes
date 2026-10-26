@@ -1,4 +1,6 @@
 * text=auto eol=lf
+# Captured command output preserves its original spaces and blank lines.
+docs/submission/logs/*.txt -whitespace
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf

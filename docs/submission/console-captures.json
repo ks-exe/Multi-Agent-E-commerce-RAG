@@ -1,0 +1,32 @@
+[
+  {
+    "file": "docs/submission/images/kb-returns.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-returns-policy-kb/XZ38YZEVM9",
+    "captured_utc": "2026-10-26T14:02:48.292Z"
+  },
+  {
+    "file": "docs/submission/images/kb-returns-sync.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-returns-policy-kb/XZ38YZEVM9/returns-policy-documents/A4OCKNCVVY",
+    "captured_utc": "2026-10-26T14:02:51.120Z"
+  },
+  {
+    "file": "docs/submission/images/kb-shipping.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-shipping-policy-kb/NOUBGNAIZF",
+    "captured_utc": "2026-10-26T14:02:55.009Z"
+  },
+  {
+    "file": "docs/submission/images/kb-shipping-sync.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-shipping-policy-kb/NOUBGNAIZF/shipping-policy-documents/Z9TMTQET38",
+    "captured_utc": "2026-10-26T14:02:57.881Z"
+  },
+  {
+    "file": "docs/submission/images/kb-warranty.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-warranty-policy-kb/DDSNJMEKAF",
+    "captured_utc": "2026-10-26T14:03:01.660Z"
+  },
+  {
+    "file": "docs/submission/images/kb-warranty-sync.png",
+    "url": "https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/knowledge-bases/novamart-warranty-policy-kb/DDSNJMEKAF/warranty-policy-documents/K7NDBHYKKF",
+    "captured_utc": "2026-10-26T14:03:04.225Z"
+  }
+]

@@ -20,16 +20,19 @@ python -m pip install uv
 aws sts get-caller-identity --region us-east-1
 ```
 
-Copy `.env.example` to `.env` **only if `.env` does not already exist**. In
-PowerShell:
+The repository includes a credential-free `.env` deployment snapshot for the
+reviewer. For a deployment in your own AWS account, replace it with the template
+and populate your own IDs. Preserve your existing local settings if you have
+already deployed this project. In PowerShell:
 
 ```powershell
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+Copy-Item .env.example .env
 ```
 
 Keep `PROJECT_NAME=udacity-agentcore` and `AWS_REGION=us-east-1` for the supplied
-scripts. `.env` stores deployment identifiers and is excluded from Git and the
-runtime package. AWS credentials come from the normal AWS credential chain.
+scripts. The root `.env` stores public deployment identifiers and is included
+for review; it is excluded from the runtime package. AWS credentials come from
+the normal AWS credential chain and must never be added to `.env`.
 
 ## Foundation and Knowledge Bases
 

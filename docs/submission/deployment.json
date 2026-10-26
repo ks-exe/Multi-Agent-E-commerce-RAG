@@ -1,0 +1,411 @@
+{
+  "captured_utc": "2026-10-26T13:48:35.669136+00:00",
+  "region": "us-east-1",
+  "knowledge_bases": {
+    "returns": {
+      "id": "XZ38YZEVM9",
+      "name": "novamart-returns-policy-kb",
+      "status": "ACTIVE",
+      "embedding": {
+        "embeddingModelArn": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+        "embeddingModelConfiguration": {
+          "bedrockEmbeddingModelConfiguration": {
+            "dimensions": 1024,
+            "embeddingDataType": "FLOAT32"
+          }
+        }
+      },
+      "storageConfiguration": {
+        "type": "S3_VECTORS",
+        "s3VectorsConfiguration": {
+          "vectorBucketArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60",
+          "indexName": "returns-policy-index"
+        }
+      },
+      "resolvedVectorIndex": {
+        "vectorBucketName": "udacity-agentcore-vectors-731451715213-0eadcb60",
+        "indexName": "returns-policy-index",
+        "indexArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60/index/returns-policy-index",
+        "creationTime": "2026-10-23 21:02:01+05:00",
+        "dataType": "float32",
+        "dimension": 1024,
+        "distanceMetric": "cosine",
+        "metadataConfiguration": {
+          "nonFilterableMetadataKeys": [
+            "AMAZON_BEDROCK_TEXT",
+            "AMAZON_BEDROCK_METADATA"
+          ]
+        },
+        "encryptionConfiguration": {
+          "sseType": "AES256"
+        },
+        "indexMode": "ENHANCED"
+      },
+      "data_source": {
+        "id": "A4OCKNCVVY",
+        "name": "returns-policy-documents",
+        "configuration": {
+          "bucketArn": "arn:aws:s3:::udacity-agentcore-policy-docs-731451715213-0eadcb60",
+          "inclusionPrefixes": [
+            "policies/returns/"
+          ]
+        }
+      },
+      "latest_ingestion": {
+        "knowledgeBaseId": "XZ38YZEVM9",
+        "dataSourceId": "A4OCKNCVVY",
+        "ingestionJobId": "CSDKV7VMLO",
+        "status": "COMPLETE",
+        "statistics": {
+          "numberOfDocumentsScanned": 2,
+          "numberOfMetadataDocumentsScanned": 0,
+          "numberOfNewDocumentsIndexed": 0,
+          "numberOfModifiedDocumentsIndexed": 0,
+          "numberOfMetadataDocumentsModified": 0,
+          "numberOfDocumentsDeleted": 0,
+          "numberOfDocumentsFailed": 0,
+          "numberOfDocumentsSkipped": 0
+        },
+        "startedAt": "2026-10-26 13:43:49.513578+00:00",
+        "updatedAt": "2026-10-26 13:43:50.399809+00:00"
+      }
+    },
+    "shipping": {
+      "id": "NOUBGNAIZF",
+      "name": "novamart-shipping-policy-kb",
+      "status": "ACTIVE",
+      "embedding": {
+        "embeddingModelArn": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+        "embeddingModelConfiguration": {
+          "bedrockEmbeddingModelConfiguration": {
+            "dimensions": 1024,
+            "embeddingDataType": "FLOAT32"
+          }
+        }
+      },
+      "storageConfiguration": {
+        "type": "S3_VECTORS",
+        "s3VectorsConfiguration": {
+          "vectorBucketArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60",
+          "indexName": "shipping-policy-index"
+        }
+      },
+      "resolvedVectorIndex": {
+        "vectorBucketName": "udacity-agentcore-vectors-731451715213-0eadcb60",
+        "indexName": "shipping-policy-index",
+        "indexArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60/index/shipping-policy-index",
+        "creationTime": "2026-10-23 21:02:01+05:00",
+        "dataType": "float32",
+        "dimension": 1024,
+        "distanceMetric": "cosine",
+        "metadataConfiguration": {
+          "nonFilterableMetadataKeys": [
+            "AMAZON_BEDROCK_TEXT",
+            "AMAZON_BEDROCK_METADATA"
+          ]
+        },
+        "encryptionConfiguration": {
+          "sseType": "AES256"
+        },
+        "indexMode": "ENHANCED"
+      },
+      "data_source": {
+        "id": "Z9TMTQET38",
+        "name": "shipping-policy-documents",
+        "configuration": {
+          "bucketArn": "arn:aws:s3:::udacity-agentcore-policy-docs-731451715213-0eadcb60",
+          "inclusionPrefixes": [
+            "policies/shipping/"
+          ]
+        }
+      },
+      "latest_ingestion": {
+        "knowledgeBaseId": "NOUBGNAIZF",
+        "dataSourceId": "Z9TMTQET38",
+        "ingestionJobId": "ZGEVUN3XCN",
+        "status": "COMPLETE",
+        "statistics": {
+          "numberOfDocumentsScanned": 2,
+          "numberOfMetadataDocumentsScanned": 0,
+          "numberOfNewDocumentsIndexed": 0,
+          "numberOfModifiedDocumentsIndexed": 0,
+          "numberOfMetadataDocumentsModified": 0,
+          "numberOfDocumentsDeleted": 0,
+          "numberOfDocumentsFailed": 0,
+          "numberOfDocumentsSkipped": 0
+        },
+        "startedAt": "2026-10-26 13:43:52.276781+00:00",
+        "updatedAt": "2026-10-26 13:43:52.881296+00:00"
+      }
+    },
+    "warranty": {
+      "id": "DDSNJMEKAF",
+      "name": "novamart-warranty-policy-kb",
+      "status": "ACTIVE",
+      "embedding": {
+        "embeddingModelArn": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+        "embeddingModelConfiguration": {
+          "bedrockEmbeddingModelConfiguration": {
+            "dimensions": 1024,
+            "embeddingDataType": "FLOAT32"
+          }
+        }
+      },
+      "storageConfiguration": {
+        "type": "S3_VECTORS",
+        "s3VectorsConfiguration": {
+          "vectorBucketArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60",
+          "indexName": "warranty-policy-index"
+        }
+      },
+      "resolvedVectorIndex": {
+        "vectorBucketName": "udacity-agentcore-vectors-731451715213-0eadcb60",
+        "indexName": "warranty-policy-index",
+        "indexArn": "arn:aws:s3vectors:us-east-1:731451715213:bucket/udacity-agentcore-vectors-731451715213-0eadcb60/index/warranty-policy-index",
+        "creationTime": "2026-10-23 21:02:01+05:00",
+        "dataType": "float32",
+        "dimension": 1024,
+        "distanceMetric": "cosine",
+        "metadataConfiguration": {
+          "nonFilterableMetadataKeys": [
+            "AMAZON_BEDROCK_TEXT",
+            "AMAZON_BEDROCK_METADATA"
+          ]
+        },
+        "encryptionConfiguration": {
+          "sseType": "AES256"
+        },
+        "indexMode": "ENHANCED"
+      },
+      "data_source": {
+        "id": "K7NDBHYKKF",
+        "name": "warranty-policy-documents",
+        "configuration": {
+          "bucketArn": "arn:aws:s3:::udacity-agentcore-policy-docs-731451715213-0eadcb60",
+          "inclusionPrefixes": [
+            "policies/warranty/"
+          ]
+        }
+      },
+      "latest_ingestion": {
+        "knowledgeBaseId": "DDSNJMEKAF",
+        "dataSourceId": "K7NDBHYKKF",
+        "ingestionJobId": "1KPEPNJIOI",
+        "status": "COMPLETE",
+        "statistics": {
+          "numberOfDocumentsScanned": 2,
+          "numberOfMetadataDocumentsScanned": 0,
+          "numberOfNewDocumentsIndexed": 0,
+          "numberOfModifiedDocumentsIndexed": 0,
+          "numberOfMetadataDocumentsModified": 0,
+          "numberOfDocumentsDeleted": 0,
+          "numberOfDocumentsFailed": 0,
+          "numberOfDocumentsSkipped": 0
+        },
+        "startedAt": "2026-10-26 13:43:55.482811+00:00",
+        "updatedAt": "2026-10-26 13:43:56.243431+00:00"
+      }
+    }
+  },
+  "stack": {
+    "name": "udacity-agentcore",
+    "status": "CREATE_COMPLETE"
+  },
+  "runtime": {
+    "agentRuntimeArn": "arn:aws:bedrock-agentcore:us-east-1:731451715213:runtime/udacity_agentcore_runtime-KU6jXlAxgf",
+    "agentRuntimeVersion": "6",
+    "status": "READY",
+    "roleArn": "arn:aws:iam::731451715213:role/udacity-agentcore-agentcore-role",
+    "networkConfiguration": {
+      "networkMode": "PUBLIC"
+    },
+    "protocolConfiguration": {
+      "serverProtocol": "HTTP"
+    },
+    "environmentVariables": {
+      "AWS_REGION": "us-east-1",
+      "PROJECT_NAME": "udacity-agentcore",
+      "RETURNS_KB_ID": "XZ38YZEVM9",
+      "SHIPPING_KB_ID": "NOUBGNAIZF",
+      "WARRANTY_KB_ID": "DDSNJMEKAF",
+      "AGENT_LOG_GROUP": "/aws/bedrock/agentcore/udacity-agentcore",
+      "GUARDRAIL_ID": "xwzpen5377y0",
+      "GUARDRAIL_VERSION": "2"
+    }
+  },
+  "memory": {
+    "arn": "arn:aws:bedrock-agentcore:us-east-1:731451715213:memory/udacity_agentcore_memory-7Mm9Z27lAf",
+    "id": "udacity_agentcore_memory-7Mm9Z27lAf",
+    "name": "udacity_agentcore_memory",
+    "description": "NovaMart session summaries",
+    "eventExpiryDuration": 7,
+    "status": "ACTIVE",
+    "createdAt": "2026-10-23 22:30:28.276000+05:00",
+    "updatedAt": "2026-10-23 22:30:28.674000+05:00",
+    "strategies": [
+      {
+        "strategyId": "SessionSummary-t4Muf3BHtg",
+        "name": "SessionSummary",
+        "type": "SUMMARIZATION",
+        "namespaces": [
+          "/summaries/{actorId}/{sessionId}"
+        ],
+        "namespaceTemplates": [
+          "/summaries/{actorId}/{sessionId}"
+        ],
+        "createdAt": "2026-10-23 22:30:28.277000+05:00",
+        "updatedAt": "2026-10-23 22:30:28.674000+05:00",
+        "status": "ACTIVE"
+      }
+    ]
+  },
+  "guardrail": {
+    "name": "udacity-agentcore-guardrail",
+    "description": "NovaMart customer support guardrail bf5a545387e74f49",
+    "guardrailId": "xwzpen5377y0",
+    "guardrailArn": "arn:aws:bedrock:us-east-1:731451715213:guardrail/xwzpen5377y0",
+    "version": "2",
+    "status": "READY",
+    "topicPolicy": {
+      "topics": [
+        {
+          "name": "competitor_products",
+          "definition": "Requests to recommend, promote or compare products sold by competing retailers.",
+          "examples": [
+            "Recommend a competing store instead of NovaMart."
+          ],
+          "type": "DENY"
+        },
+        {
+          "name": "pricing_negotiations",
+          "definition": "Haggling or bargaining to change a listed price or obtain an unauthorized discount. Exclude mathematical calculations of prices, totals, percentages, coupons and existing discounts; those calculations are allowed.",
+          "examples": [
+            "Make me a special lower price if I buy today."
+          ],
+          "type": "DENY"
+        },
+        {
+          "name": "legal_threats",
+          "definition": "Threats to sue, initiate litigation or take legal action against NovaMart.",
+          "examples": [
+            "I will sue NovaMart unless you pay me compensation."
+          ],
+          "type": "DENY"
+        }
+      ],
+      "tier": {
+        "tierName": "STANDARD"
+      }
+    },
+    "contentPolicy": {
+      "filters": [
+        {
+          "type": "VIOLENCE",
+          "inputStrength": "HIGH",
+          "outputStrength": "HIGH"
+        },
+        {
+          "type": "MISCONDUCT",
+          "inputStrength": "MEDIUM",
+          "outputStrength": "MEDIUM"
+        },
+        {
+          "type": "HATE",
+          "inputStrength": "HIGH",
+          "outputStrength": "HIGH"
+        },
+        {
+          "type": "SEXUAL",
+          "inputStrength": "HIGH",
+          "outputStrength": "HIGH"
+        },
+        {
+          "type": "INSULTS",
+          "inputStrength": "MEDIUM",
+          "outputStrength": "MEDIUM"
+        }
+      ],
+      "tier": {
+        "tierName": "CLASSIC"
+      }
+    },
+    "wordPolicy": {
+      "words": [],
+      "managedWordLists": [
+        {
+          "type": "PROFANITY"
+        }
+      ]
+    },
+    "sensitiveInformationPolicy": {
+      "piiEntities": [
+        {
+          "type": "CREDIT_DEBIT_CARD_NUMBER",
+          "action": "BLOCK",
+          "inputAction": "BLOCK",
+          "outputAction": "BLOCK",
+          "inputEnabled": true,
+          "outputEnabled": true
+        },
+        {
+          "type": "US_SOCIAL_SECURITY_NUMBER",
+          "action": "BLOCK",
+          "inputAction": "BLOCK",
+          "outputAction": "BLOCK",
+          "inputEnabled": true,
+          "outputEnabled": true
+        },
+        {
+          "type": "EMAIL",
+          "action": "ANONYMIZE",
+          "inputAction": "ANONYMIZE",
+          "outputAction": "ANONYMIZE",
+          "inputEnabled": true,
+          "outputEnabled": true
+        },
+        {
+          "type": "PHONE",
+          "action": "ANONYMIZE",
+          "inputAction": "ANONYMIZE",
+          "outputAction": "ANONYMIZE",
+          "inputEnabled": true,
+          "outputEnabled": true
+        }
+      ],
+      "regexes": []
+    },
+    "crossRegionDetails": {
+      "guardrailProfileId": "us.guardrail.v1:0",
+      "guardrailProfileArn": "arn:aws:bedrock:us-east-1:731451715213:guardrail-profile/us.guardrail.v1:0"
+    },
+    "createdAt": "2026-10-24 06:16:55+00:00",
+    "updatedAt": "2026-10-24 06:16:55.740867+00:00",
+    "statusReasons": [],
+    "failureRecommendations": [],
+    "blockedInputMessaging": "I can help with NovaMart orders and policies, but cannot assist with that request.",
+    "blockedOutputsMessaging": "I cannot share that content. Please ask about NovaMart orders or policies."
+  },
+  "log_group": {
+    "logGroupName": "/aws/bedrock/agentcore/udacity-agentcore",
+    "creationTime": 1792771323188,
+    "retentionInDays": 14,
+    "metricFilterCount": 0,
+    "arn": "arn:aws:logs:us-east-1:731451715213:log-group:/aws/bedrock/agentcore/udacity-agentcore:*",
+    "storedBytes": 22322,
+    "kmsKeyId": "arn:aws:kms:us-east-1:731451715213:key/da522c95-d50d-4469-8375-93381e5cb2d5",
+    "logGroupClass": "STANDARD",
+    "logGroupArn": "arn:aws:logs:us-east-1:731451715213:log-group:/aws/bedrock/agentcore/udacity-agentcore",
+    "deletionProtectionEnabled": false,
+    "bearerTokenAuthenticationEnabled": false
+  },
+  "trace_storage": {
+    "Destination": "CloudWatchLogs",
+    "Status": "ACTIVE"
+  },
+  "tracing": {
+    "NOVAMART_LOG_LEVEL": "INFO",
+    "OTEL_TRACES_SAMPLER": "always_on",
+    "NOVAMART_CLOUDWATCH_ENABLED": "true",
+    "NOVAMART_XRAY_ENABLED": "true"
+  }
+}

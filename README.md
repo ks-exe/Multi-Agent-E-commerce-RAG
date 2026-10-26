@@ -6,15 +6,21 @@
 ![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![Amazon Bedrock AgentCore](https://img.shields.io/badge/Amazon_Bedrock-AgentCore-232F3E)
 ![Strands Agents SDK](https://img.shields.io/badge/Strands-Agents_SDK-0E8A75)
-[![Project grader 120/120](https://img.shields.io/badge/Project_grader-120%2F120-14845B)](docs/evidence/grader-output.txt)
+[![Project grader 120/120](https://img.shields.io/badge/Project_grader-120%2F120-14845B)](docs/submission/logs/all.txt)
 
 NovaMart handles order status, returns, account tiers, policy questions, and discount calculations through five specialized agents and three policy retrievers. The implementation combines LLM reasoning with explicit routing controls, versioned DynamoDB state, published guardrails, and distributed tracing.
 
 **Engineering focus:** agent orchestration · parallel RAG · AWS infrastructure · workflow correctness · observability.
 
-[Architecture](#architecture) · [Screenshots](#screenshots-and-execution-evidence) · [Run locally](#run-locally) · [Deployment guide](docs/DEPLOYMENT.md) · [Verification data](docs/evidence/verification.json)
+[Reviewer evidence](docs/submission/README.md) · [Architecture](#architecture) · [Screenshots](#screenshots-and-execution-evidence) · [Run locally](#run-locally) · [Deployment guide](docs/DEPLOYMENT.md) · [Verification data](docs/evidence/verification.json)
 
 ## Screenshots and execution evidence
+
+**Latest AWS verification, 26 October 2026:** **120/120** on the unchanged grader,
+**5/5** deployed workflows verified, and **433** trace spans. The
+[resubmission evidence index](docs/submission/README.md) includes all individual
+task screenshots, AWS deployment and KB sync screens, end-to-end output, and the
+requested [deployment .env](.env) containing resource identifiers only.
 
 The screenshots below show the repository's **local evidence viewer**, rendered from a deployed AWS run on **24 October 2026**. They display saved execution data, not a live customer application or the AWS Console. After cloning, open [`docs/index.html`](docs/index.html) in a browser to explore the scenarios and responses without AWS credentials.
 
@@ -49,20 +55,28 @@ The evidence viewer includes all five saved responses. The discount example corr
 
 ### Captured in the AWS Console
 
-The screenshots below were captured directly from **CloudWatch's X-Ray trace view** after a fresh deployed run on **26 October 2026 PKT (25 October UTC)**. The policy request contains **101 spans**, with **zero faults, errors, or throttles**. AWS groups the Strands agents under the NovaMart service, so the span list shows their individual names.
+The current policy trace shows **NovaMart-Orchestrator connected to PolicyAgent,
+CommunicationAgent, and the three named policy retrievers**. It contains **111
+spans** with zero faults, errors, or throttles. The screenshot below comes
+directly from CloudWatch's X-Ray Trace details, captured on **26 October 2026**.
 
-![Actual AWS Console showing OrchestratorAgent, PolicyAgent, three policy retrievers, and CommunicationAgent with OK status](docs/images/aws-policy-agent-spans.png)
+![Actual AWS X-Ray service graph connecting NovaMart-Orchestrator to named worker agents](docs/submission/images/xray-service-map.png)
+
+X-Ray infers these logical dependency nodes from spans around actual agent
+invocations. The agents execute inside one AgentCore Runtime; the graph's
+`remote` classification does not imply separate worker deployments. Native
+Strands spans preserve the detailed model calls, tool calls, and concurrent
+retrieval timings.
 
 <details>
-<summary><strong>View the actual AWS service graph for this request</strong></summary>
+<summary><strong>Inspect the six named agent spans</strong></summary>
 
-![Actual AWS X-Ray trace graph showing NovaMart-Orchestrator calling Bedrock Runtime, Bedrock retrieval, DynamoDB, and AgentCore](docs/images/aws-xray-service-map.png)
-
-The graph is the **per-request Trace Map** opened from Trace details. Account navigation and excess whitespace were cropped; the trace data was not changed. The aggregate Trace Map can be empty when a request is not selected for indexing. Direct trace retrieval displayed this request without changing the account's indexing rule.
+![Actual AWS Console with six agent spans, OK statuses, and execution durations](docs/submission/images/xray-agent-spans.png)
 
 </details>
 
-Trace: [`1-6ade8235-b9e542f95bb170852565722e`](https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6ade8235-b9e542f95bb170852565722e) (AWS sign-in required). See the [capture instructions](docs/SUBMISSION.md) to reproduce these views.
+Trace: [`1-6adf59a2-8986522044a491fdd8722990`](https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59a2-8986522044a491fdd8722990)
+(AWS sign-in required). See the [complete evidence and capture instructions](docs/submission/README.md).
 
 ## Architecture
 

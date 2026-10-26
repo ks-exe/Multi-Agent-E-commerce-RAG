@@ -1,0 +1,9 @@
+{
+  "command": "python -X utf8 -u infrastructure/verify_deployment.py",
+  "python_version": "3.13.3",
+  "started_utc": "2026-10-26T13:48:26.498289+00:00",
+  "finished_utc": "2026-10-26T13:48:52.889575+00:00",
+  "exit_code": 0,
+  "passed": true,
+  "transcript_sha256": "a169861f65104c3c4383104917d7324942697d739c08809f6494fe390ae59d8a"
+}

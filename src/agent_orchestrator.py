@@ -65,6 +65,7 @@ from strands.models import BedrockModel
 from boto3.dynamodb.conditions import Key
 
 import config
+from telemetry import agent_call
 from bedrock_kb_retrieval import retrieve_from_knowledge_base, format_kb_results
 
 # Configure logging for debugging
@@ -414,7 +415,8 @@ def build_policy_agent() -> Agent:
 
         def run(agent):
             agent.messages = []
-            return str(agent(query)).strip()
+            with agent_call(agent.name):
+                return str(agent(query)).strip()
 
         try:
             with ThreadPoolExecutor(max_workers=3) as executor:
@@ -579,7 +581,8 @@ def build_orchestrator_agent(
         token = _worker_customer.set(state['customer_id'])
         session_token = _worker_session.set(session_id)
         try:
-            result = str(agent(prompt)).strip()
+            with agent_call(agent.name):
+                result = str(agent(prompt)).strip()
         finally:
             _worker_customer.reset(token)
             _worker_session.reset(session_token)

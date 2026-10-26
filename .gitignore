@@ -44,3 +44,7 @@ docs/BASELINE.md
 .agents/
 .DS_Store
 Thumbs.db
+
+# Explicit reviewer requirement: the root snapshot contains resource IDs only.
+# Other environment files and all credential directories remain ignored.
+!/.env

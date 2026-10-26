@@ -1,0 +1,90 @@
+Running deployed AgentCore scenarios...
+
+Session: 48ef3fed-74ab-458e-b36b-cbca86dd1281 | Customer: CUST-001
+Query: I want to return order ORD-27176 because the left speaker is defective.
+Trace ID: 1-6adf5982-5be1e6d6cd30e6699f4c27e4
+https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf5982-5be1e6d6cd30e6699f4c27e4
+Response: Thank you for contacting NovaMart, Alice. 
+
+I can confirm that your return request for order ORD-27176 (Wireless Headphones Pro) has already been submitted on October 24, 2026, due to the defective left speaker. 
+
+Your return reference number is **RET-4B87FA96F36E**. Please keep this number for your records—you can use it to track the status of your return.
+
+If you have any questions about the return process or need further assistance, please don't hesitate to ask!
+
+Session: e834fe5c-fe37-4e1f-98ee-c555b2f32f26 | Customer: CUST-002
+Query: What is the return policy for premium customers?
+Trace ID: 1-6adf59a2-8986522044a491fdd8722990
+https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59a2-8986522044a491fdd8722990
+Response: Thank you for reaching out to NovaMart! I'm happy to explain our return policy for Premium customers.
+
+## **Premium Customer Return Policy**
+
+**Extended Return Window:**
+Premium customers receive a **60-day return window** – double the standard 30-day period for regular customers.
+
+**How Premium Status Works:**
+Customers are automatically upgraded to Premium tier when they meet either threshold:
+- Spend $500+ in a calendar year, OR
+- Place 20+ orders in a calendar year
+
+Tier status is evaluated on a rolling 12-month basis.
+
+## **Return Process**
+The return process is straightforward:
+1. Log in to your account and go to Order History
+2. Select the item and click "Start Return"
+3. Choose your return reason
+4. Print the prepaid return shipping label
+5. Pack the item and drop off at an authorized carrier
+6. Refunds are processed within 5-7 business days
+
+## **Additional Premium Benefits**
+Beyond the extended return window, Premium customers also enjoy:
+- Free expedited shipping on all orders
+- 3-year warranty on electronics (vs. 2-year standard)
+- Priority customer support with response within 4 hours
+- Early access to sales and new product launches
+- Dedicated account manager for orders over $500
+
+Is there anything specific about the return process or Premium benefits you'd like to know more about?
+
+Session: fb2b46bc-3401-49d7-9513-26a1ae1eedef | Customer: CUST-003
+Query: How much would 5 items at $29.99 be with a 10% discount?
+Trace ID: 1-6adf59c1-d5a071fa4a1cb1dfd2ea3172
+https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59c1-d5a071fa4a1cb1dfd2ea3172
+Response: Thank you for your question! Let me calculate that for you.
+
+**Calculation:**
+- 5 items at $29.99 each = 5 × $29.99 = $149.95
+- 10% discount = $149.95 × 0.10 = $14.995
+- Final price = $149.95 - $14.995 = **$134.96**
+
+So 5 items at $29.99 each with a 10% discount would cost **$134.96**.
+
+Is there anything else I can help you with today?
+
+Session: e58e72bd-244e-4e56-8d56-fc1f351c611c | Customer: CUST-004
+Query: What is my tier? Am I premium?
+Trace ID: 1-6adf59cd-49b6491c1d6f45e68a68fc08
+https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59cd-49b6491c1d6f45e68a68fc08
+Response: Hello! I've checked your account details. You are currently on the **Standard** tier, not Premium. Your account has been with us since January 2023, and you've placed 5 orders.
+
+Is there anything else I can help you with today?
+
+Session: c8928261-ad6d-4982-b2cb-851be46d2fa5 | Customer: CUST-002
+Query: What is the status of order ORD-28001?
+Trace ID: 1-6adf59de-462a3d20334ee8ce85c1acce
+https://us-east-1.console.aws.amazon.com/xray/home?region=us-east-1#/traces/1-6adf59de-462a3d20334ee8ce85c1acce
+Response: Thank you for contacting NovaMart! 
+
+Your order **ORD-28001** has been **delivered**. Here are the details:
+
+- **Order Date:** September 8, 2026
+- **Product:** Running Shoes X200
+- **Price:** $89.99
+- **Quantity:** 1
+- **Tracking Number:** TRK000028001
+- **Estimated Delivery Date:** September 13, 2026
+
+If you have any questions or concerns about this order, please let me know and I'll be happy to help!

@@ -1,0 +1,17 @@
+
+───────────────────────────────────────────────────────
+  Task 5 - Bedrock Knowledge Bases
+───────────────────────────────────────────────────────
+  ✓ PASS [+8pts] RETURNS_KB_ID is set in environment (XZ38YZEVM9)
+  ✓ PASS [+0pts] Returns Knowledge Base is ACTIVE
+  ✓ PASS [+8pts] SHIPPING_KB_ID is set in environment (NOUBGNAIZF)
+  ✓ PASS [+0pts] Shipping Knowledge Base is ACTIVE
+  ✓ PASS [+9pts] WARRANTY_KB_ID is set in environment (DDSNJMEKAF)
+  ✓ PASS [+0pts] Warranty Knowledge Base is ACTIVE
+
+═══════════════════════════════════════════════════════
+  Score: 25/25 pts (100%)
+═══════════════════════════════════════════════════════
+
+  🎉 Perfect score! All tasks complete.
+

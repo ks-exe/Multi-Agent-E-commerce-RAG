@@ -1,0 +1,9 @@
+{
+  "command": "python -X utf8 -u tests/test_live_parallel_retrieval.py",
+  "python_version": "3.13.3",
+  "started_utc": "2026-10-26T13:39:50.988491+00:00",
+  "finished_utc": "2026-10-26T13:40:25.628915+00:00",
+  "exit_code": 0,
+  "passed": true,
+  "transcript_sha256": "9b3c1f3c81ba6aa0de69b6398da2157cb348443183f2c55ab3f30cfbc716c44e"
+}

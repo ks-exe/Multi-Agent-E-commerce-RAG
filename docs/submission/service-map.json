@@ -1,0 +1,612 @@
+{
+  "RetrievalStatus": "COMPLETE",
+  "Services": [
+    {
+      "Service": {
+        "ReferenceId": 0,
+        "Name": "Bedrock",
+        "Names": [
+          "Bedrock"
+        ],
+        "Type": "AWS::Bedrock",
+        "State": "unknown",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 3,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 3,
+          "TotalResponseTime": 1.227
+        },
+        "DurationHistogram": [
+          {
+            "Value": 0.4,
+            "Count": 1
+          },
+          {
+            "Value": 0.46,
+            "Count": 1
+          },
+          {
+            "Value": 0.368,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 1,
+        "Name": "BedrockAgentCore",
+        "Names": [
+          "BedrockAgentCore"
+        ],
+        "Type": "AWS::BedrockAgentCore",
+        "State": "unknown",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 2,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 2,
+          "TotalResponseTime": 0.156
+        },
+        "DurationHistogram": [
+          {
+            "Value": 0.108,
+            "Count": 1
+          },
+          {
+            "Value": 0.049,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 2,
+        "Name": "BedrockRuntime",
+        "Names": [
+          "BedrockRuntime"
+        ],
+        "Type": "AWS::BedrockRuntime",
+        "State": "unknown",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 14,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 14,
+          "TotalResponseTime": 39.472
+        },
+        "DurationHistogram": [
+          {
+            "Value": 4.838,
+            "Count": 1
+          },
+          {
+            "Value": 1.781,
+            "Count": 1
+          },
+          {
+            "Value": 3.782,
+            "Count": 1
+          },
+          {
+            "Value": 0.563,
+            "Count": 1
+          },
+          {
+            "Value": 5.617,
+            "Count": 1
+          },
+          {
+            "Value": 5.257,
+            "Count": 1
+          },
+          {
+            "Value": 2.703,
+            "Count": 1
+          },
+          {
+            "Value": 1.95,
+            "Count": 1
+          },
+          {
+            "Value": 2.814,
+            "Count": 1
+          },
+          {
+            "Value": 1.375,
+            "Count": 1
+          },
+          {
+            "Value": 1.001,
+            "Count": 1
+          },
+          {
+            "Value": 1.927,
+            "Count": 1
+          },
+          {
+            "Value": 0.422,
+            "Count": 1
+          },
+          {
+            "Value": 5.439,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 3,
+        "Name": "CommunicationAgent",
+        "Names": [
+          "CommunicationAgent"
+        ],
+        "Type": "remote",
+        "State": "passive",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 5.722
+        },
+        "DurationHistogram": [
+          {
+            "Value": 5.722,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 4,
+        "Name": "DynamoDB",
+        "Names": [
+          "DynamoDB"
+        ],
+        "Type": "AWS::DynamoDB",
+        "State": "unknown",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 12,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 12,
+          "TotalResponseTime": 0.097
+        },
+        "DurationHistogram": [
+          {
+            "Value": 0.005,
+            "Count": 2
+          },
+          {
+            "Value": 0.004,
+            "Count": 4
+          },
+          {
+            "Value": 0.036,
+            "Count": 1
+          },
+          {
+            "Value": 0.007,
+            "Count": 3
+          },
+          {
+            "Value": 0.006,
+            "Count": 2
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 5,
+        "Name": "NovaMart-Orchestrator",
+        "Names": [
+          "NovaMart-Orchestrator"
+        ],
+        "Root": true,
+        "State": "active",
+        "Edges": [
+          {
+            "ReferenceId": 10,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 7.925
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 7,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 15.88
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 3,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 5.722
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 9,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 8.48
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 2,
+            "SummaryStatistics": {
+              "OkCount": 14,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 14,
+              "TotalResponseTime": 39.472
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 0,
+            "SummaryStatistics": {
+              "OkCount": 3,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 3,
+              "TotalResponseTime": 1.227
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 1,
+            "SummaryStatistics": {
+              "OkCount": 2,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 2,
+              "TotalResponseTime": 0.156
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 8,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 7.873
+            },
+            "Aliases": []
+          },
+          {
+            "ReferenceId": 4,
+            "SummaryStatistics": {
+              "OkCount": 12,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 12,
+              "TotalResponseTime": 0.097
+            },
+            "Aliases": []
+          }
+        ],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 26.015
+        },
+        "DurationHistogram": [
+          {
+            "Value": 26.015,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 6,
+        "Name": "NovaMart-Orchestrator",
+        "Names": [
+          "NovaMart-Orchestrator"
+        ],
+        "Type": "client",
+        "State": "unknown",
+        "Edges": [
+          {
+            "ReferenceId": 5,
+            "SummaryStatistics": {
+              "OkCount": 1,
+              "ErrorStatistics": {
+                "ThrottleCount": 0,
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "FaultStatistics": {
+                "OtherCount": 0,
+                "TotalCount": 0
+              },
+              "TotalCount": 1,
+              "TotalResponseTime": 26.015
+            },
+            "Aliases": []
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 7,
+        "Name": "PolicyAgent",
+        "Names": [
+          "PolicyAgent"
+        ],
+        "Type": "remote",
+        "State": "passive",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 15.88
+        },
+        "DurationHistogram": [
+          {
+            "Value": 15.88,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 8,
+        "Name": "ReturnsPolicyRetrieverAgent",
+        "Names": [
+          "ReturnsPolicyRetrieverAgent"
+        ],
+        "Type": "remote",
+        "State": "passive",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 7.873
+        },
+        "DurationHistogram": [
+          {
+            "Value": 7.873,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 9,
+        "Name": "ShippingPolicyRetrieverAgent",
+        "Names": [
+          "ShippingPolicyRetrieverAgent"
+        ],
+        "Type": "remote",
+        "State": "passive",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 8.48
+        },
+        "DurationHistogram": [
+          {
+            "Value": 8.48,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    },
+    {
+      "Service": {
+        "ReferenceId": 10,
+        "Name": "WarrantyPolicyRetrieverAgent",
+        "Names": [
+          "WarrantyPolicyRetrieverAgent"
+        ],
+        "Type": "remote",
+        "State": "passive",
+        "Edges": [],
+        "SummaryStatistics": {
+          "OkCount": 1,
+          "ErrorStatistics": {
+            "ThrottleCount": 0,
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "FaultStatistics": {
+            "OtherCount": 0,
+            "TotalCount": 0
+          },
+          "TotalCount": 1,
+          "TotalResponseTime": 7.925
+        },
+        "DurationHistogram": [
+          {
+            "Value": 7.925,
+            "Count": 1
+          }
+        ]
+      },
+      "Links": []
+    }
+  ],
+  "trace_id": "1-6adf59a2-8986522044a491fdd8722990",
+  "captured_utc": "2026-10-26T13:56:37.294881+00:00"
+}
